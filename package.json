@@ -25,6 +25,7 @@
     "eslint-plugin-react": "7.12.4"
   },
   "dependencies": {
-    "@babel/runtime": "7.4.3"
+    "@babel/runtime": "7.4.3",
+    "json-schema-ref-parser": "6.1.0"
   }
 }

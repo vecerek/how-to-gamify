@@ -1,0 +1,28 @@
+{
+  "definitions": {
+    "1": {
+      "id": 1,
+      "type": "framework",
+      "title": "For the win: How game thinking can revolutionize your business.",
+      "authors": [
+        "K. Werbach",
+        "D. Hunter"
+      ],
+      "year": 2012,
+      "dependencies": []
+    },
+    "2": {
+      "id": 2,
+      "type": "framework",
+      "title": "Designing gamification. Marketing.",
+      "authors": [
+        "K. Julius",
+        "J. Salo"
+      ],
+      "year": 2013,
+      "dependencies": [
+        { "$ref": "#/definitions/1" }
+      ]
+    }
+  }
+}

@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "author": "Attila Večerek",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "yarn build && node lib/index.js"
+  },
   "licenses": [
     {
       "type": "Apache 2.0",
@@ -10,6 +14,9 @@
     }
   ],
   "devDependencies": {
+    "@babel/cli": "7.4.3",
+    "@babel/core": "7.4.3",
+    "@babel/preset-env": "7.4.3",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.17.2",

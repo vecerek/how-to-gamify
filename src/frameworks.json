@@ -9,6 +9,7 @@
         "D. Hunter"
       ],
       "year": 2012,
+      "url": "https://isbnsearch.org/isbn/9781613630235",
       "dependencies": []
     },
     "2": {
@@ -20,6 +21,7 @@
         "J. Salo"
       ],
       "year": 2013,
+      "url": "http://jultika.oulu.fi/files/nbnfioulu-201306061526.pdf",
       "dependencies": [
         { "$ref": "#/definitions/1" }
       ]

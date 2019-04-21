@@ -314,6 +314,39 @@
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
     },
+    "10": {
+      "id": 10,
+      "title": "Gamification: A Simple Introduction",
+      "authors": [
+        "A. Marczewski"
+      ],
+      "year": 2013,
+      "url": "http://www.lulu.com/shop/andrzej-marczewski/gamification-a-simple-introduction/ebook/product-20671386.html",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "E" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "E" },
+        { "$ref": "features.json#/definitions/rules", "value": "U" },
+        { "$ref": "features.json#/definitions/metrics", "value": "E" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "E" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "U" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
+    },
     "1000": {
       "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",

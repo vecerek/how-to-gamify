@@ -2,6 +2,41 @@
   "definitions": {
     "1": {
       "id": 1,
+      "title": "A social gamification framework for a K-6 learning platform",
+      "authors": [
+        "J. Simões",
+        "R. D. Redondo",
+        "A. F. Vilas"
+      ],
+      "year": 2013,
+      "url": "https://doi.org/10.1016/j.chb.2012.06.007",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "U" },
+        { "$ref": "features.json#/definitions/risk", "value": "E" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "U" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "I" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
+    },
+    "1000": {
+      "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",
       "authors": [
         "K. Werbach",
@@ -14,7 +49,7 @@
         { "$ref": "features.json#/definitions/objectives", "value": "E" }
       ]
     },
-    "2": {
+    "2000": {
       "id": 2,
       "title": "Designing gamification. Marketing.",
       "authors": [

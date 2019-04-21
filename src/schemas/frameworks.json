@@ -513,6 +513,40 @@
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
     },
+    "16": {
+      "id": 16,
+      "title": "Designing gamification: creating gameful and playful experiences",
+      "authors": [
+        "D. Gears",
+        "K. Braun"
+      ],
+      "year": 2013,
+      "url": "https://s3.amazonaws.com/academia.edu.documents/31229679/CHI-GamificationDesign_GEARS.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1555867725&Signature=gN%2BW0qHwcj0kggKLq%2BYL241ai6k%3D&response-content-disposition=inline%3B%20filename%3DGamification_in_Business_Designing_Motiv.pdf",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "E" },
+        { "$ref": "features.json#/definitions/investment", "value": "E" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "U" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "U" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "I" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "U" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "U" },
+        { "$ref": "features.json#/definitions/technology", "value": "U" }
+      ]
+    },
     "2000": {
       "id": 2,
       "title": "Designing gamification. Marketing.",

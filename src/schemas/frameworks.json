@@ -2,7 +2,6 @@
   "definitions": {
     "1": {
       "id": 1,
-      "type": "framework",
       "title": "For the win: How game thinking can revolutionize your business.",
       "authors": [
         "K. Werbach",
@@ -17,7 +16,6 @@
     },
     "2": {
       "id": 2,
-      "type": "framework",
       "title": "Designing gamification. Marketing.",
       "authors": [
         "K. Julius",

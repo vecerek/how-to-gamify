@@ -855,6 +855,41 @@
         { "$ref": "features.json#/definitions/user_experience", "value": "E" },
         { "$ref": "features.json#/definitions/technology", "value": "I" }
       ]
+    },
+    "26": {
+      "id": 26,
+      "title": "Gamification for Internet Based Learning in Health Professions Education",
+      "authors": [
+        "D. Rojas",
+        "B. Kapralos",
+        "A. Dubrowski"
+      ],
+      "year": 2014,
+      "url": "https://doi.org/10.1109/ICALT.2014.87",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "E" },
+        { "$ref": "features.json#/definitions/investment", "value": "E" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "I" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "U" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "U" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "U" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
     }
   }
 }

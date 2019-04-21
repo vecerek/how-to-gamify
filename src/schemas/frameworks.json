@@ -176,6 +176,40 @@
         { "$ref": "features.json#/definitions/technology", "value": "I" }
       ]
     },
+    "6": {
+      "id": 6,
+      "title": "Gamification in e-Learning Systems: A Conceptual Model to Engage Students and Its Application in an Adaptive e-Learning System",
+      "authors": [
+        "A. Klock",
+        "L. da Cunha"
+      ],
+      "year": 2015,
+      "url": "https://doi.org/10.1007/978-3-319-20609-7_56",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "I" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "U" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "U" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "E" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "E" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "E" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "E" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "E" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
+    },
     "1000": {
       "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",

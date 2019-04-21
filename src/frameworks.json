@@ -10,7 +10,10 @@
       ],
       "year": 2012,
       "url": "https://isbnsearch.org/isbn/9781613630235",
-      "dependencies": []
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" }
+      ]
     },
     "2": {
       "id": 2,

@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import jsonRefParser from 'json-schema-ref-parser';
 
@@ -7,11 +6,10 @@ const SRC_PATH = path.resolve(ROOT_PATH, 'src');
 
 (async function() {
   try {
-    const frameworksJson = fs.readFileSync(path.resolve(SRC_PATH, 'frameworks.json'), 'utf8');
-    const frameworkSchema = JSON.parse(frameworksJson);
-    const frameworks = await jsonRefParser.dereference(frameworkSchema);
+    const frameworksPath = path.resolve(SRC_PATH, 'frameworks.json');
+    const frameworks = await jsonRefParser.dereference(frameworksPath);
 
-    console.log(frameworks.definitions['2'].dependencies);
+    console.log(frameworks.definitions['1'].features);
   } catch (e) {
     console.log(e);
   }

@@ -582,6 +582,39 @@
         { "$ref": "features.json#/definitions/user_experience", "value": "E" },
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
+    },
+    "18": {
+      "id": 18,
+      "title": "Gamification as a service",
+      "authors": [
+        "P. Herzig"
+      ],
+      "year": 2014,
+      "url": "http://nbn-resolving.de/urn:nbn:de:bsz:14-qucosa-148108",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "U" },
+        { "$ref": "features.json#/definitions/risk", "value": "I" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "I" },
+        { "$ref": "features.json#/definitions/endgame", "value": "I" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "E" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "I" },
+        { "$ref": "features.json#/definitions/fun", "value": "I" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "I" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "I" },
+        { "$ref": "features.json#/definitions/profiling", "value": "U" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "I" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
     }
   }
 }

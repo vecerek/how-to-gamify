@@ -818,6 +818,43 @@
         { "$ref": "features.json#/definitions/user_experience", "value": "E" },
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
+    },
+    "25": {
+      "id": 25,
+      "title": "Is it all a game? Understanding the principles of gamification",
+      "authors": [
+        "K. Robson",
+        "K. Plangger",
+        "J. H. Kietzmann",
+        "I. McCarthy",
+        "L. Pitt"
+      ],
+      "year": 2015,
+      "url": "https://doi.org/10.1016/j.bushor.2015.03.006",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "U" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "I" },
+        { "$ref": "features.json#/definitions/endgame", "value": "E" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "U" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "I" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "I" }
+      ]
     }
   }
 }

@@ -890,6 +890,40 @@
         { "$ref": "features.json#/definitions/user_experience", "value": "U" },
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
+    },
+    "27": {
+      "id": 27,
+      "title": "A Participatory Design Framework for the Gamification of Rehabilitation Systems",
+      "authors": [
+        "D. Charles",
+        "S. McDonough"
+      ],
+      "year": 2014,
+      "url": "http://www.icdvrat.org/2014/papers/ICDVRAT2014_SP01_Charles_McDonough.pdf",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "U" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "U" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "U" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "E" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "E" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
     }
   }
 }

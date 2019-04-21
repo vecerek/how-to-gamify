@@ -347,6 +347,39 @@
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
     },
+    "11": {
+      "id": 11,
+      "title": "Gamification: A tool to improve sustainability efforts.",
+      "authors": [
+        "B. Merino de Paz"
+      ],
+      "year": 2013,
+      "url": "https://studentnet.cs.manchester.ac.uk/resources/library/thesis_abstracts/MSc13/FullText/MerinoDePaz-Blanca-fulltext.pdf",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "U" },
+        { "$ref": "features.json#/definitions/risk", "value": "I" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "E" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "E" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "E" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "E" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "E" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "I" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
+    },
     "1000": {
       "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",

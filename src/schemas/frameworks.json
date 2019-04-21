@@ -71,6 +71,41 @@
         { "$ref": "features.json#/definitions/technology", "value": "I" }
       ]
     },
+    "3": {
+      "id": 3,
+      "title": "Gamification framework model, based on social engagement in e-learning 2.0",
+      "authors": [
+        "O. Wongso",
+        "Y. Rosmansyah",
+        "Y. Bandung"
+      ],
+      "year": 2015,
+      "url": "https://doi.org/10.1109/TIME-E.2014.7011583",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "U" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "E" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "U" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "U" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "I" },
+        { "$ref": "features.json#/definitions/profiling", "value": "U" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
+    },
     "1000": {
       "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",

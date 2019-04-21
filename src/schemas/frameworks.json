@@ -106,6 +106,42 @@
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
     },
+    "4": {
+      "id": 4,
+      "title": "FRAGGLE: A FRamework for AGile Gamification of Learning Experiences",
+      "authors": [
+        "A. Mora",
+        "P. Zaharias",
+        "C. González",
+        "J. Arnedo-Moreno"
+      ],
+      "year": 2016,
+      "url": "https://doi.org/10.1007/978-3-319-40216-1_57",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "E" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "U" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "E" },
+        { "$ref": "features.json#/definitions/endgame", "value": "E" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "E" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "E" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "E" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "E" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
+    },
     "1000": {
       "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",

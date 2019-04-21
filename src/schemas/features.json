@@ -2,6 +2,66 @@
   "definitions": {
     "objectives": {
       "id": "objectives"
+    },
+    "feasibility": {
+      "id": "feasibility"
+    },
+    "risk": {
+      "id": "risk"
+    },
+    "investment": {
+      "id": "investment"
+    },
+    "stakeholders": {
+      "id": "stakeholders"
+    },
+    "engagement_cycle": {
+      "id": "engagement_cycle"
+    },
+    "endgame": {
+      "id": "endgame"
+    },
+    "onboarding": {
+      "id": "onboarding"
+    },
+    "rules": {
+      "id": "rules"
+    },
+    "metrics": {
+      "id": "metrics"
+    },
+    "analytics": {
+      "id": "analytics"
+    },
+    "ethics": {
+      "id": "ethics"
+    },
+    "fun": {
+      "id": "fun"
+    },
+    "motivation": {
+      "id": "motivation"
+    },
+    "social": {
+      "id": "social"
+    },
+    "desired_behaviours": {
+      "id": "desired_behaviours"
+    },
+    "profiling": {
+      "id": "profiling"
+    },
+    "taxonomy": {
+      "id": "taxonomy"
+    },
+    "storytelling": {
+      "id": "storytelling"
+    },
+    "user_experience": {
+      "id": "user_experience"
+    },
+    "technology": {
+      "id": "technology"
     }
   }
 }

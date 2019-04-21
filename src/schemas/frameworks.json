@@ -681,6 +681,42 @@
         { "$ref": "features.json#/definitions/user_experience", "value": "E" },
         { "$ref": "features.json#/definitions/technology", "value": "I" }
       ]
+    },
+    "21": {
+      "id": 21,
+      "title": "Gamification of online surveys: conceptual foundations and a design process based on the MDA framework",
+      "authors": [
+        "J. Harms",
+        "C. Wimmer",
+        "K. Kappel",
+        "T. Grechenig"
+      ],
+      "year": 2014,
+      "url": "https://doi.org/10.1145/2639189.2639230",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "E" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "U" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "U" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "E" }
+      ]
     }
   }
 }

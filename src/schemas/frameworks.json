@@ -210,6 +210,40 @@
         { "$ref": "features.json#/definitions/technology", "value": "E" }
       ]
     },
+    "7": {
+      "id": 7,
+      "title": "The kaleidoscope of effective gamification: deconstructing gamification in business applications",
+      "authors": [
+        "D. L. Kappen",
+        "L. E. Nacke"
+      ],
+      "year": 2013,
+      "url": "https://doi.org/10.1145/2583008.2583029",
+      "dependencies": [],
+      "features": [
+        { "$ref": "features.json#/definitions/objectives", "value": "E" },
+        { "$ref": "features.json#/definitions/feasibility", "value": "E" },
+        { "$ref": "features.json#/definitions/risk", "value": "U" },
+        { "$ref": "features.json#/definitions/investment", "value": "U" },
+        { "$ref": "features.json#/definitions/stakeholders", "value": "U" },
+        { "$ref": "features.json#/definitions/engagement_cycle", "value": "U" },
+        { "$ref": "features.json#/definitions/endgame", "value": "U" },
+        { "$ref": "features.json#/definitions/onboarding", "value": "U" },
+        { "$ref": "features.json#/definitions/rules", "value": "E" },
+        { "$ref": "features.json#/definitions/metrics", "value": "U" },
+        { "$ref": "features.json#/definitions/analytics", "value": "E" },
+        { "$ref": "features.json#/definitions/ethics", "value": "U" },
+        { "$ref": "features.json#/definitions/fun", "value": "E" },
+        { "$ref": "features.json#/definitions/motivation", "value": "E" },
+        { "$ref": "features.json#/definitions/social", "value": "E" },
+        { "$ref": "features.json#/definitions/desired_behaviours", "value": "E" },
+        { "$ref": "features.json#/definitions/profiling", "value": "E" },
+        { "$ref": "features.json#/definitions/taxonomy", "value": "U" },
+        { "$ref": "features.json#/definitions/storytelling", "value": "U" },
+        { "$ref": "features.json#/definitions/user_experience", "value": "E" },
+        { "$ref": "features.json#/definitions/technology", "value": "U" }
+      ]
+    },
     "1000": {
       "id": 1,
       "title": "For the win: How game thinking can revolutionize your business.",

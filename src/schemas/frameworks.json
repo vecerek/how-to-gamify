@@ -10,6 +10,7 @@
       ],
       "year": 2013,
       "url": "https://doi.org/10.1016/j.chb.2012.06.007",
+      "application_area": "learning",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -46,6 +47,7 @@
       ],
       "year": 2013,
       "url": "https://doi.org/10.1007/978-3-642-39226-9_12",
+      "application_area": "learning",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -81,6 +83,7 @@
       ],
       "year": 2015,
       "url": "https://doi.org/10.1109/TIME-E.2014.7011583",
+      "application_area": "learning",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -117,6 +120,7 @@
       ],
       "year": 2016,
       "url": "https://doi.org/10.1007/978-3-319-40216-1_57",
+      "application_area": "learning",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -185,6 +189,7 @@
       ],
       "year": 2015,
       "url": "https://doi.org/10.1007/978-3-319-20609-7_56",
+      "application_area": "learning",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "I" },
@@ -289,6 +294,7 @@
       ],
       "year": 2013,
       "url": "https://doi.org/10.1007/978-1-4471-5445-7_9",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -355,6 +361,7 @@
       ],
       "year": 2013,
       "url": "https://studentnet.cs.manchester.ac.uk/resources/library/thesis_abstracts/MSc13/FullText/MerinoDePaz-Blanca-fulltext.pdf",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -388,6 +395,7 @@
       ],
       "year": 2015,
       "url": "https://www.goodreads.com/book/show/25416321-actionable-gamification",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -421,6 +429,7 @@
       ],
       "year": 2015,
       "url": "https://eprints.qut.edu.au/83675/",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -455,6 +464,7 @@
       ],
       "year": 2012,
       "url": "https://isbnsearch.org/isbn/9781613630235",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -488,6 +498,7 @@
       ],
       "year": 2013,
       "url": "https://doi.org/10.1007/978-3-642-39241-2_58",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -522,6 +533,7 @@
       ],
       "year": 2013,
       "url": "https://s3.amazonaws.com/academia.edu.documents/31229679/CHI-GamificationDesign_GEARS.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1555867725&Signature=gN%2BW0qHwcj0kggKLq%2BYL241ai6k%3D&response-content-disposition=inline%3B%20filename%3DGamification_in_Business_Designing_Motiv.pdf",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -556,6 +568,7 @@
       ],
       "year": 2013,
       "url": "http://jultika.oulu.fi/files/nbnfioulu-201306061526.pdf",
+      "application_area": "business",
       "dependencies": [
         { "$ref": "#/definitions/1" }
       ],
@@ -591,6 +604,7 @@
       ],
       "year": 2014,
       "url": "http://nbn-resolving.de/urn:nbn:de:bsz:14-qucosa-148108",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -624,6 +638,7 @@
       ],
       "year": 2014,
       "url": "https://doi.org/10.1386/jgvw.6.2.159_1",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -657,6 +672,7 @@
       ],
       "year": 2014,
       "url": "https://isbnsearch.org/isbn/1937134857",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -693,6 +709,7 @@
       ],
       "year": 2014,
       "url": "https://doi.org/10.1145/2639189.2639230",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -726,6 +743,7 @@
       ],
       "year": 2014,
       "url": "https://doi.org/10.1007/978-3-319-10208-5_25",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -761,6 +779,7 @@
       ],
       "year": 2015,
       "url": "https://doi.org/10.1109/ITNG.2015.78",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -794,6 +813,7 @@
       ],
       "year": 2015,
       "url": "https://doi.org/10.22215/timreview/918",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -831,6 +851,7 @@
       ],
       "year": 2015,
       "url": "https://doi.org/10.1016/j.bushor.2015.03.006",
+      "application_area": "business",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -866,6 +887,7 @@
       ],
       "year": 2014,
       "url": "https://doi.org/10.1109/ICALT.2014.87",
+      "application_area": "health",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -900,6 +922,7 @@
       ],
       "year": 2014,
       "url": "http://www.icdvrat.org/2014/papers/ICDVRAT2014_SP01_Charles_McDonough.pdf",
+      "application_area": "health",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },

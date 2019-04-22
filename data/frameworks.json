@@ -155,6 +155,7 @@
       ],
       "year": 2015,
       "url": "https://doi.org/10.1007/978-3-319-10208-5",
+      "application_area": "learning",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -224,6 +225,7 @@
       ],
       "year": 2013,
       "url": "https://doi.org/10.1145/2583008.2583029",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -258,6 +260,7 @@
       ],
       "year": 2013,
       "url": "https://www.researchgate.net/publication/255708104_Process_of_Gamification_From_The_Consideration_of_Gamification_To_Its_Practical_Implementation",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },
@@ -328,6 +331,7 @@
       ],
       "year": 2013,
       "url": "http://www.lulu.com/shop/andrzej-marczewski/gamification-a-simple-introduction/ebook/product-20671386.html",
+      "application_area": "generic",
       "dependencies": [],
       "features": [
         { "$ref": "features.json#/definitions/objectives", "value": "E" },

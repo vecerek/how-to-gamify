@@ -9,7 +9,7 @@ const DATA_PATH = path.resolve(__dirname, '..', 'data');
     const frameworksPath = path.resolve(DATA_PATH, 'frameworks.json');
     const frameworks = await jsonRefParser.dereference(frameworksPath);
 
-    console.log(frameworks.definitions['1'].features);
+    console.log(frameworks['1'].features);
   } catch (e) {
     console.log(e);
   }

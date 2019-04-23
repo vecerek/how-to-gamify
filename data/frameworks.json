@@ -89,7 +89,9 @@
     "description": "A framework based on social engagement which can be applied to e-learning environments and based on the Design Science Research Methodology (Peffers et al. 2007) It comprises five iterative phases: analysis, design, development, implementation and evaluation.",
     "application_area": "learning",
     "target": [ "educator" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/dsrm" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "E" },
@@ -128,7 +130,11 @@
     "description": "An iterative framework for agile gamification of the learning experience. It is based on Lean UX (Gothelf and Seiden 2013) and Behaviour-Driven Development (Chelimsky et al. 2010) principles and structured in four phases: declaration, creation, execution and learning.",
     "application_area": "learning",
     "target": [ "educator" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/lean_ux" },
+      { "$ref": "dependencies.json#/bdd" },
+      { "$ref": "dependencies.json#/mda" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "E" },
@@ -202,7 +208,11 @@
     "description": "A conceptual framework, based on the MDA and 6D frameworks (Werbach and Hunter 2012), for engaging students, and its application in adaptive e-learning systems. By the definition of a set of dimensions, it provides information on what game elements, actors, data and behaviour should be involved in the gamification process.",
     "application_area": "learning",
     "target": [ "educator" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "#/14" },
+      { "$ref": "dependencies.json#/mda" },
+      { "$ref": "dependencies.json#/hexad" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "I" },
       { "$ref": "features.json#/feasibility", "value": "U" },
@@ -239,7 +249,10 @@
     "description": "A design framework and design analysis tool for gamification based on games design and SDT (Ryan and Deci 2000). It comprises a set of layers: effective gamification core, motivated behaviour, game experience, game-design process and perception of fun.",
     "application_area": "generic",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/sdt" },
+      { "$ref": "dependencies.json#/mda" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "E" },
@@ -315,7 +328,9 @@
     "description": "A method based on the SDT (Ryan and Deci 2000) for applying gamification as a tool to improve the participation and motivation of people in performing different tasks, considering a structure formed by game core, engine and interface.",
     "application_area": "generic",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/sdt" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "U" },
@@ -351,7 +366,9 @@
     "description": "A simple framework, called GAME, based on two main phases: planning tasks to be developed, including the tasks of gathering information, purpose and knowledge from the players, and the tasks related with the design by using appropriate game elements, analytics and metrics, testing, feedback, and releasing.",
     "application_area": "generic",
     "target": [ "general" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/hexad" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "E" },
@@ -387,7 +404,9 @@
     "description": "A guideline consisting of three phases: setting up of business goals (suitability, teaming, objectives, outcomes and player profiling), design (desired behaviours, game components and game design), and implementation and maintenance (including the development or buying, deployment, collecting data and adjusting).",
     "application_area": "generic",
     "target": [ "general" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "#/14" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "U" },
@@ -423,7 +442,9 @@
     "description": "A framework called Octalysis based on an octagon which comprises eight ‘gameful’ shapes: epic meaning and calling, development and accomplishment, creativity and feedback, ownership and possession, social influence and relatedness, scarcity and impatience, unpredictability and curiosity, and loss and avoidance.",
     "application_area": "generic",
     "target": [ "general" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/bartle" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "I" },
@@ -459,7 +480,9 @@
     "description": "An iterative framework for designing gamification based on the following relevant elements: user experience, motivation and gamification experience, and considering the following main steps: justifying, designing and evaluating.",
     "application_area": "generic",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/mda" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "E" },
@@ -496,7 +519,9 @@
     "description": "Commonly known as 6D, it is the most popular and referenced gamification design framework. It conceives the following steps: defining business objectives and expected behaviours, describing the players, devising the activity loops without forgetting the fun, and finally, deploying the gamification system with the appropriate tools.",
     "application_area": "generic",
     "target": [ "general" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/bartle" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "I" },
@@ -755,7 +780,9 @@
     "description": "A structured design process for gamification of surveys based on the MDA framework and form design layers. It proposes four steps: aesthetics and the relationship layer; dynamics and the conversation; mechanics and the conversation and appearance; and prototyping, evaluation and iteration.",
     "application_area": "business",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/mda" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "E" },
@@ -791,7 +818,11 @@
     "description": "A prescriptive method for designing a gamification environment for companies, to guide designers from the conceptualisation to the implementation through six phases: setting the goals and objectives, understanding challenges and motivations, analysing motivations, designing, measuring and improving, and engaging boosters.",
     "application_area": "business",
     "target": [ "designer", "software developer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/mda" },
+      { "$ref": "dependencies.json#/bartle" },
+      { "$ref": "dependencies.json#/yee" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "U" },
@@ -829,7 +860,9 @@
     "description": "A conceptual framework to guide the design of gamification in crowdsourcing-based systems. It comprises a guideline that combines knowledge from software engineering, collaborative systems, game design and interaction design. Four main phases are proposed: gathering, analysis, modelling and execution.",
     "application_area": "business",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "#/14" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "U" },
@@ -865,7 +898,9 @@
     "description": "An adaptation of the MDA framework for enterprise gamification to accomplish the connections between end-user motivations, interactive gameplay elements, technology features and functions. A set of guidelines for design and for management are also proposed.",
     "application_area": "business",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/mda" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "I" },
@@ -905,7 +940,9 @@
     "description": "A framework based on mechanics, dynamics and emotions (MDE), an adaptation of the MDA framework to aid the design process considering mechanics, settings, contexts and interactions, dynamics, and emotions.",
     "application_area": "business",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/mda" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "U" },
@@ -980,7 +1017,9 @@
     "description": "A framework for guiding the design of gameful rehabilitation systems placing emphasis on people, aesthetics, context and technology. From design to development process four dimensions are defined: people, aesthetics, technology and context.",
     "application_area": "health",
     "target": [ "designer" ],
-    "dependencies": [],
+    "dependencies": [
+      { "$ref": "dependencies.json#/hexad" }
+    ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
       { "$ref": "features.json#/feasibility", "value": "U" },

@@ -607,7 +607,7 @@
     "application_area": "business",
     "target": [ "general" ],
     "dependencies": [
-      { "$ref": "#/1" }
+      { "$ref": "#/14" }
     ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },

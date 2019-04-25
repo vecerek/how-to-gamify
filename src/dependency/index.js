@@ -56,7 +56,7 @@ export default class Dependency {
   }
 }
 
-const buildDependencies = deps => Array.from(
+const buildDependencies = (deps = []) => Array.from(
   deps.reduce(
     (acc, d) => acc.add(Dependency.create(d)),
     new Set(),

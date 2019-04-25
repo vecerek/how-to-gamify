@@ -66,7 +66,6 @@ test.serial('#displayAuthor returns the author\'s name when it is the only autho
   const dependency = Dependency.create({
     id: 'a',
     authors: ['J. Smith'],
-    dependencies: [],
   });
 
   t.is(dependency.displayAuthor, 'J. Smith');
@@ -76,7 +75,6 @@ test.serial('#displayAuthor returns the first author when there are multiple aut
   const dependency = Dependency.create({
     id: 'a',
     authors: ['J. Smith', 'J. Doe'],
-    dependencies: [],
   });
 
   t.is(dependency.displayAuthor, 'Smith et al.');

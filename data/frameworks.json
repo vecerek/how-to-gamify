@@ -1,6 +1,6 @@
 {
-  "1": {
-    "id": 1,
+  "simoes_2013": {
+    "id": "simoes_2013",
     "title": "A social gamification framework for a K-6 learning platform",
     "authors": [
       "J. Simões",
@@ -37,8 +37,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "2": {
-    "id": 2,
+  "nah_2013": {
+    "id": "nah_2013",
     "title": "Gamification of Education Using Computer Games",
     "authors": [
       "F. F.-H. Nah",
@@ -76,8 +76,8 @@
       { "$ref": "features.json#/technology", "value": "I" }
     ]
   },
-  "3": {
-    "id": 3,
+  "wongso_2015": {
+    "id": "wongso_2015",
     "title": "Gamification framework model, based on social engagement in e-learning 2.0",
     "authors": [
       "O. Wongso",
@@ -116,8 +116,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "4": {
-    "id": 4,
+  "mora_2016": {
+    "id": "mora_2016",
     "display_name": "FRAGGLE",
     "title": "FRAGGLE: A FRamework for AGile Gamification of Learning Experiences",
     "authors": [
@@ -160,8 +160,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "5": {
-    "id": 5,
+  "kotini_2015": {
+    "id": "kotini_2015",
     "title": "A gamification-based framework for developing learning activities of computational thinking",
     "authors": [
       "I. Kotini",
@@ -197,8 +197,8 @@
       { "$ref": "features.json#/technology", "value": "I" }
     ]
   },
-  "6": {
-    "id": 6,
+  "klock_2015": {
+    "id": "klock_2015",
     "title": "Gamification in e-Learning Systems: A Conceptual Model to Engage Students and Its Application in an Adaptive e-Learning System",
     "authors": [
       "A. Klock",
@@ -238,8 +238,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "7": {
-    "id": 7,
+  "kappen_2013": {
+    "id": "kappen_2013",
     "title": "The kaleidoscope of effective gamification: deconstructing gamification in business applications",
     "authors": [
       "D. L. Kappen",
@@ -278,8 +278,8 @@
       { "$ref": "features.json#/technology", "value": "U" }
     ]
   },
-  "8": {
-    "id": 8,
+  "marache-francisco_2013": {
+    "id": "marache-francisco_2013",
     "title": "Process of Gamification. From The Consideration of Gamification To Its Practical Implementation",
     "authors": [
       "C. Marache-Francisco",
@@ -315,8 +315,8 @@
       { "$ref": "features.json#/technology", "value": "U" }
     ]
   },
-  "9": {
-    "id": 9,
+  "francisco-aparicio_2013": {
+    "id": "francisco-aparicio_2013",
     "title": "Gamification: Analysis and Application",
     "authors": [
       "A. Francisco-Aparicio",
@@ -356,8 +356,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "10": {
-    "id": 10,
+  "marczewski-2013": {
+    "id": "marczewski-2013",
     "display_name": "GAME",
     "title": "Gamification: A Simple Introduction",
     "authors": [
@@ -395,8 +395,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "11": {
-    "id": 11,
+  "merino_de_paz_2013": {
+    "id": "merino-de-paz_2013",
     "title": "Gamification: A tool to improve sustainability efforts.",
     "authors": [
       "B. Merino de Paz"
@@ -433,8 +433,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "12": {
-    "id": 12,
+  "chou_2015": {
+    "id": "chou_2015",
     "display_name": "Octalysis",
     "title": "Actionable Gamification: Beyond Points, Badges, and Leaderboards",
     "authors": [
@@ -472,8 +472,8 @@
       { "$ref": "features.json#/technology", "value": "I" }
     ]
   },
-  "13": {
-    "id": 13,
+  "fitz-walter_2015": {
+    "id": "fitz-walter_2015",
     "title": "Achievement unlocked: Investigating the design of effective gamification experiences for mobile applications and devices",
     "authors": [
       "Z. J. Fitz-Walter"
@@ -510,8 +510,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "14": {
-    "id": 14,
+  "werbach_2012": {
+    "id": "werbach_2012",
     "display_name": "6D",
     "title": "For the win: How game thinking can revolutionize your business.",
     "authors": [
@@ -550,8 +550,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "15": {
-    "id": 15,
+  "kumar_2013": {
+    "id": "kumar_2013",
     "title": "Gamification at Work: Designing Engaging Business Software",
     "authors": [
       "J. Kumar"
@@ -586,8 +586,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "16": {
-    "id": 16,
+  "gears_2013": {
+    "id": "gears_2013",
     "display_name": "Role-Motivation-Interaction Framework",
     "title": "Designing gamification: creating gameful and playful experiences",
     "authors": [
@@ -624,8 +624,8 @@
       { "$ref": "features.json#/technology", "value": "U" }
     ]
   },
-  "17": {
-    "id": 17,
+  "julius_2013": {
+    "id": "julius_2013",
     "title": "Designing gamification",
     "authors": [
       "K. Julius",
@@ -663,8 +663,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "18": {
-    "id": 18,
+  "herzig_2014": {
+    "id": "herzig_2014",
     "title": "Gamification as a service",
     "authors": [
       "P. Herzig"
@@ -699,8 +699,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "19": {
-    "id": 19,
+  "raftopoulos_2014": {
+    "id": "raftopoulos_2014",
     "title": "Towards gamification transparency: A conceptual framework for the development of responsible gamified enterprise systems",
     "authors": [
       "M. Raftopoulos"
@@ -735,8 +735,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "20": {
-    "id": 20,
+  "burke_2014": {
+    "id": "burke_2014",
     "title": "Gamify: How gamification motivates people to do extraordinary things",
     "authors": [
       "B. Burke"
@@ -771,8 +771,8 @@
       { "$ref": "features.json#/technology", "value": "I" }
     ]
   },
-  "21": {
-    "id": 21,
+  "harms_2014": {
+    "id": "harms_2014",
     "title": "Gamification of online surveys: conceptual foundations and a design process based on the MDA framework",
     "authors": [
       "J. Harms",
@@ -812,8 +812,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "22": {
-    "id": 22,
+  "neeli_2014": {
+    "id": "neeli_2014",
     "title": "Gamification in the Enterprise: Differences from Consumer Market, Implications, and a Method to Manage Them",
     "authors": [
       "B. K. Neeli"
@@ -852,8 +852,8 @@
       { "$ref": "features.json#/technology", "value": "U" }
     ]
   },
-  "23": {
-    "id": 23,
+  "brito_2015": {
+    "id": "brito_2015",
     "title": "Towards a Framework for Gamification Design on Crowdsourcing Systems: The G.A.M.E. Approach",
     "authors": [
       "J. Brito",
@@ -892,8 +892,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "24": {
-    "id": 24,
+  "ruhi_2015": {
+    "id": "ruhi_2015",
     "title": "Level Up Your Strategy: Towards a Descriptive Framework for Meaningful Enterprise Gamification",
     "authors": [
       "U. Ruhi"
@@ -930,8 +930,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "25": {
-    "id": 25,
+  "robson_2015": {
+    "id": "robson_2015",
     "display_name": "Mechanics-Dynamics-Emotions (MDE) framework",
     "title": "Is it all a game? Understanding the principles of gamification",
     "authors": [
@@ -973,8 +973,8 @@
       { "$ref": "features.json#/technology", "value": "I" }
     ]
   },
-  "26": {
-    "id": 26,
+  "rojas_2014": {
+    "id": "rojas_2014",
     "title": "Gamification for Internet Based Learning in Health Professions Education",
     "authors": [
       "D. Rojas",
@@ -1011,8 +1011,8 @@
       { "$ref": "features.json#/technology", "value": "E" }
     ]
   },
-  "27": {
-    "id": 27,
+  "charles_2014": {
+    "id": "charles_2014",
     "title": "A Participatory Design Framework for the Gamification of Rehabilitation Systems",
     "authors": [
       "D. Charles",

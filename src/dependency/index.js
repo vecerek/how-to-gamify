@@ -31,6 +31,17 @@ export default class Dependency {
     dependencyRegistry.clear();
   }
 
+  get displayAuthor() {
+    const mainAuthor = this.authors[0];
+
+    if (this.authors.length === 1) {
+      return mainAuthor;
+    }
+
+    const authorLastName = mainAuthor.split('. ').pop();
+    return `${authorLastName} et al.`;
+  }
+
   flattenedDependencies(visited = new Set()) {
     visited.add(this);
 

@@ -5,7 +5,7 @@ test.afterEach(() => {
   Dependency.clearRegistry();
 });
 
-test.serial('#dependencies returns an empty array for a leaf dependency', (t) => {
+test('#dependencies returns an empty array for a leaf dependency', (t) => {
   const dependency = Dependency.create({
     id: 'a',
     dependencies: [],
@@ -60,4 +60,24 @@ test.serial('#flattenedDependencies handles circular dependencies', (t) => {
   const depIds = dependency.flattenedDependencies().map(({ id }) => id);
 
   t.deepEqual(depIds.sort(), ['a', 'b', 'c'].sort());
+});
+
+test.serial('#displayAuthor returns the author\'s name when it is the only author', (t) => {
+  const dependency = Dependency.create({
+    id: 'a',
+    authors: ['J. Smith'],
+    dependencies: [],
+  });
+
+  t.is(dependency.displayAuthor, 'J. Smith');
+});
+
+test.serial('#displayAuthor returns the first author when there are multiple authors', (t) => {
+  const dependency = Dependency.create({
+    id: 'a',
+    authors: ['J. Smith', 'J. Doe'],
+    dependencies: [],
+  });
+
+  t.is(dependency.displayAuthor, 'Smith et al.');
 });

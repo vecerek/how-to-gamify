@@ -1,41 +1,34 @@
 /* eslint-disable no-use-before-define, no-underscore-dangle */
+import Registry from '../registry';
 
-let dependencyRegistry = {};
+const dependencyRegistry = new Registry(
+  (dependency, afterCreateCb) => new Dependency(dependency, afterCreateCb),
+);
 
 export default class Dependency {
   /*
     Private. Don't use `new Dependency` directly.
     Instead, call `Dependency.create`.
   */
-  constructor(dependency, afterCreateHook = () => {}) {
+  constructor(dependency, afterCreateCb = () => {}) {
     this.id = dependency.id;
     this.title = dependency.title;
     this.authors = dependency.authors;
     this.year = dependency.year;
     this.url = dependency.url;
 
-    afterCreateHook(this);
+    afterCreateCb(this);
 
     this.dependencies = buildDependencies(dependency.dependencies);
   }
 
   static create(dependency) {
-    const { id } = dependency;
-
-    if (dependencyRegistry[id]) {
-      return dependencyRegistry[id];
-    }
-
-    const afterCreate = (dep) => {
-      dependencyRegistry[dep.id] = dep;
-    };
-
-    return new Dependency(dependency, afterCreate);
+    return dependencyRegistry.fetchOrCreate(dependency);
   }
 
   // For testing purposes only
   static clearRegistry() {
-    dependencyRegistry = {};
+    dependencyRegistry.clear();
   }
 
   flattenedDependencies(visited = new Set()) {

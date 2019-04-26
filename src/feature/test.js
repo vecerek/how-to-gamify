@@ -11,7 +11,7 @@ function featureComparisonMacro(t, inputA, inputB, expected) {
   const featureA = new Feature(inputA);
   const featureB = new Feature(inputB);
 
-  t.is(featureA.compareTo(featureB), expected);
+  t.is(featureA.compare(featureB), expected);
 }
 
 featureComparisonMacro.title = (_title, inputA, inputB, expected) => `feature value ${inputA.value} compared to the requested value ${inputB.value} returns ${expected}`;

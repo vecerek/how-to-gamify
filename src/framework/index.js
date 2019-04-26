@@ -44,7 +44,7 @@ export default class Framework extends Dependency {
 
   static scoreFeatures(base, other) {
     return Object.keys(base).reduce(
-      (acc, f) => acc + base[f].compareTo(other[f]),
+      (acc, f) => acc + base[f].compare(other[f]),
       0,
     );
   }

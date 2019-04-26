@@ -24,7 +24,7 @@ export default class Feature {
     }
   }
 
-  compareTo(otherFeature) {
+  compare(otherFeature) {
     if (this.canonicalValue === UNAVAILABLE) {
       return otherFeature.canonicalValue === UNAVAILABLE
         ? 1

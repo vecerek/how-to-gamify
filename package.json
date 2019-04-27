@@ -2,11 +2,14 @@
   "name": "gamework-selector",
   "version": "0.0.1",
   "author": "Attila Večerek",
+  "homepage": "https://vecerek.github.io/how-to-gamify",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "NODE_ENV=test ava",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "licenses": [
     {
@@ -15,10 +18,11 @@
     }
   ],
   "dependencies": {
+    "gh-pages": "2.0.1",
+    "json-schema-ref-parser": "6.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    "json-schema-ref-parser": "6.1.0"
+    "react-scripts": "3.0.0"
   },
   "devDependencies": {
     "@babel/register": "7.4.4",

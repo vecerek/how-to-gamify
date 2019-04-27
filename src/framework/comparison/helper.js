@@ -1,5 +1,5 @@
 import {
-  DEFAULT_WEIGHTS, MATCH, PARTIAL_MATCH, MISMATCH, domains, targets,
+  DEFAULT_WEIGHTS, MATCH, PARTIAL_MATCH, MISMATCH, props,
 } from './constants';
 
 const compareSets = (base, other, partialConditionFn) => {
@@ -29,13 +29,13 @@ const compareSets = (base, other, partialConditionFn) => {
 export const compareDomains = (base, other) => compareSets(
   base.domains,
   other.domains,
-  () => other.domains.has(domains.GENERIC),
+  () => other.domains.has(props.domains.GENERIC),
 );
 
 export const compareTargets = (base, other) => compareSets(
   base.targets,
   other.targets,
-  () => other.targets.has(targets.GENERAL),
+  () => other.targets.has(props.targets.GENERAL),
 );
 
 export const compareFeatures = (base, other) => Object.keys(base.features).reduce(
@@ -47,14 +47,13 @@ export const compareFeatures = (base, other) => Object.keys(base.features).reduc
 );
 
 export const calculateScore = (comparison, weights = DEFAULT_WEIGHTS) => {
-  const domainScore = weights.domains * Math.max(...Object.values(comparison.domains));
-  const targetScore = weights.targets * Math.max(...Object.values(comparison.targets));
-  const featureScore = weights.features * Object.values(comparison.features).reduce(
-    (sum, v) => sum + v,
-  );
+  const { domains, targets, features } = comparison;
+  const domainScore = weights.domains * Math.max(...Object.values(domains));
+  const targetScore = weights.targets * Math.max(...Object.values(targets));
+  const featureScore = weights.features * Object.values(features).reduce((sum, v) => sum + v);
 
 
-  const featureCnt = Object.keys(comparison.features).length;
+  const featureCnt = Object.keys(features).length;
   const potentialScore = weights.domains + weights.targets + weights.features * featureCnt;
 
   return (domainScore + targetScore + featureScore) / potentialScore;

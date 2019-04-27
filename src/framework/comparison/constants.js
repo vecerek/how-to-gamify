@@ -8,9 +8,11 @@ export const MATCH = 1;
 export const PARTIAL_MATCH = 0.5;
 export const MISMATCH = 0;
 
-export const domains = {
-  GENERIC: 'generic',
-};
-export const targets = {
-  GENERAL: 'general',
+export const props = {
+  domains: {
+    GENERIC: 'generic',
+  },
+  targets: {
+    GENERAL: 'general',
+  },
 };

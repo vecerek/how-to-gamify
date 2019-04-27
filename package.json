@@ -1,12 +1,9 @@
 {
   "name": "gamework-selector",
   "version": "0.0.1",
-  "main": "src/index.js",
   "author": "Attila Večerek",
   "scripts": {
-    "build": "babel src -d lib --ignore '*/**/test.js'",
-    "test": "ava",
-    "start": "yarn build && node lib/index.js"
+    "test": "ava"
   },
   "licenses": [
     {

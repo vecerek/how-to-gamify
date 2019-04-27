@@ -1,6 +1,5 @@
 import test from 'ava';
 import Framework from './index';
-import { MATCH, PARTIAL_MATCH, MISMATCH } from './constants';
 
 test.afterEach(() => Framework.clearRegistry());
 
@@ -22,95 +21,7 @@ test('initializes object successfully', (t) => {
   });
 });
 
-test('#scoreTargets returns "MISMATCH" if there is no common member', (t) => {
-  t.is(
-    Framework.scoreTargets(
-      new Set(['designer', 'software developer']),
-      new Set(['researcher']),
-    ),
-    MISMATCH,
-  );
-});
-
-test('#scoreTargets returns "MATCH" if there is at least one common member', (t) => {
-  t.is(
-    Framework.scoreTargets(
-      new Set(['designer', 'software developer']),
-      new Set(['designer', 'researcher']),
-    ),
-    MATCH,
-  );
-});
-
-test('#scoreTargets returns "PARTIAL MATCH" if there is no common member and the other set contains "general"', (t) => {
-  t.is(
-    Framework.scoreTargets(
-      new Set(['designer', 'software developer']),
-      new Set(['general']),
-    ),
-    PARTIAL_MATCH,
-  );
-});
-
-test('#scoreDomains returns "MISMATCH" if there is no common member', (t) => {
-  t.is(
-    Framework.scoreDomains(
-      new Set(['generic']),
-      new Set(['business']),
-    ),
-    MISMATCH,
-  );
-});
-
-test('#scoreDomains returns "MATCH" if there is at least one common member', (t) => {
-  t.is(
-    Framework.scoreDomains(
-      new Set(['business']),
-      new Set(['business']),
-    ),
-    MATCH,
-  );
-});
-
-test('#scoreDomains returns "PARTIAL MATCH" if there is no common member and the other set contains "generic"', (t) => {
-  t.is(
-    Framework.scoreDomains(
-      new Set(['business']),
-      new Set(['generic']),
-    ),
-    PARTIAL_MATCH,
-  );
-});
-
-test('#scoreFeatures returns the sum of individual feature comparison results', (t) => {
-  const frameworkA = Framework.create({
-    application_area: ['business'],
-    target: ['designer', 'researcher'],
-    features: [
-      { id: 'a', value: 'E' },
-      { id: 'b', value: 'I' },
-      { id: 'c', value: 'U' },
-      { id: 'd', value: 'E' },
-      { id: 'e', value: 'I' },
-    ],
-  });
-  const frameworkB = Framework.create({
-    application_area: ['generic'],
-    target: ['researcher'],
-    features: [
-      { id: 'a', value: 'U' },
-      { id: 'b', value: 'E' },
-      { id: 'c', value: 'E' },
-      { id: 'd', value: 'E' },
-      { id: 'e', value: 'E' },
-    ],
-  });
-
-  // 2 partial matches (0.5) and a complete match (1) => 2*0.5 + 1 = 2
-  t.is(Framework.scoreFeatures(frameworkA.features, frameworkB.features), 2);
-});
-
-test('#compare with the default weights returns the correct result', (t) => {
+test('#compare with default weights returns the correct comparison object', (t) => {
   const frameworkA = Framework.create({
     application_area: ['business'],
     target: ['designer', 'researcher'],
@@ -140,7 +51,7 @@ test('#compare with the default weights returns the correct result', (t) => {
     Features: 2 partial matches, 1 full match => s(f): 2 * w(f)
     Total: sum of scores (s(d) + s(t) + s(f)) / sum of max potential scores (w(d)+w(t)+|f|*w(f))
    */
-  t.deepEqual(frameworkA.compare(frameworkB), 3.5 / 7);
+  t.deepEqual(frameworkA.compare(frameworkB).score, 3.5 / 7);
 });
 
 test('#compare with custom weights returns the correct result', (t) => {
@@ -179,7 +90,7 @@ test('#compare with custom weights returns the correct result', (t) => {
     Features: 2 partial matches, 1 full match => 2 * 2 = 4
     Total: sum of scores (1.5 + 1 + 4) / sum of max potential scores (3 + 1 + 5*2)
    */
-  t.is(frameworkA.compare(frameworkB, weights), 6.5 / 14);
+  t.is(frameworkA.compare(frameworkB, weights).score, 6.5 / 14);
 });
 
 test('#displayName returns the display_name when available', (t) => {

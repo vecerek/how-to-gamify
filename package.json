@@ -2,7 +2,7 @@
   "name": "gamework-selector",
   "version": "0.0.1",
   "author": "Attila Večerek",
-  "homepage": "https://vecerek.github.io/how-to-gamify",
+  "homepage": "https://howtogamify.tech",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

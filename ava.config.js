@@ -1,4 +1,4 @@
 export default {
-  require: ['@babel/register'],
-  files: ['./*/**/test.js'],
+  require: ['./src/test.js'],
+  files: ['./src/*/**/test.js'],
 };

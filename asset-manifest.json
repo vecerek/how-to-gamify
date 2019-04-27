@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/how-to-gamify/static/css/main.584f321a.chunk.css",
+    "main.js": "/how-to-gamify/static/js/main.2193ccab.chunk.js",
+    "main.js.map": "/how-to-gamify/static/js/main.2193ccab.chunk.js.map",
+    "runtime~main.js": "/how-to-gamify/static/js/runtime~main.fc294eef.js",
+    "runtime~main.js.map": "/how-to-gamify/static/js/runtime~main.fc294eef.js.map",
+    "static/js/2.b41502e9.chunk.js": "/how-to-gamify/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/how-to-gamify/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/how-to-gamify/index.html",
+    "precache-manifest.9e5afb4ac86bee58a0f5223e465cabe1.js": "/how-to-gamify/precache-manifest.9e5afb4ac86bee58a0f5223e465cabe1.js",
+    "service-worker.js": "/how-to-gamify/service-worker.js",
+    "static/css/main.584f321a.chunk.css.map": "/how-to-gamify/static/css/main.584f321a.chunk.css.map",
+    "static/media/logo.svg": "/how-to-gamify/static/media/logo.5d5d9eef.svg"
+  }
+}

@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // eslint-disable-line strict
 
 const fs = require('fs');
 const isWsl = require('is-wsl');
@@ -452,6 +452,16 @@ module.exports = function(webpackEnv) {
                 },
                 'sass-loader'
               ),
+            },
+            {
+              test: /\.json$/,
+              exclude: /node_modules/,
+              use: [
+                {
+                  loader: path.resolve('src/lib/loaders/json-schema-loader/index.js'),
+                  options: {/* ... */}
+                }
+              ]
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.

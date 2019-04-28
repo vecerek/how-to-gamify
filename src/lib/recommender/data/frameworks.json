@@ -210,7 +210,7 @@
     "application_area": "learning",
     "target": [ "educator" ],
     "dependencies": [
-      { "$ref": "#/14" },
+      { "$ref": "#/werbach_2012" },
       { "$ref": "dependencies.json#/mda" },
       { "$ref": "dependencies.json#/hexad" }
     ],
@@ -407,7 +407,7 @@
     "application_area": "generic",
     "target": [ "general" ],
     "dependencies": [
-      { "$ref": "#/14" }
+      { "$ref": "#/werbach_2012" }
     ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
@@ -637,7 +637,7 @@
     "application_area": "business",
     "target": [ "general" ],
     "dependencies": [
-      { "$ref": "#/14" }
+      { "$ref": "#/werbach_2012" }
     ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },
@@ -866,7 +866,7 @@
     "application_area": "business",
     "target": [ "designer" ],
     "dependencies": [
-      { "$ref": "#/14" }
+      { "$ref": "#/werbach_2012" }
     ],
     "features": [
       { "$ref": "features.json#/objectives", "value": "E" },

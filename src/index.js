@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { applyMiddleware, compose, createStore } from 'redux';
+import { createBrowserHistory } from 'history'
+import { applyMiddleware, compose, combineReducers,createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { connectRouter, routerMiddleware } from 'connected-react-router'
 import thunkMiddleware from 'redux-thunk';
+import { ConnectedRouter } from 'connected-react-router'
 import rootReducer from './reducers';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const history = createBrowserHistory({});
 
 const middleware = [
+  routerMiddleware(history),
   thunkMiddleware,
 ];
 
@@ -22,13 +27,19 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const store = createStore(
-  rootReducer,
+  combineReducers(
+    Object.assign({}, rootReducer, {
+      router: connectRouter(history),
+    })
+  ),
   compose(applyMiddleware(...middleware))
 );
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
 );

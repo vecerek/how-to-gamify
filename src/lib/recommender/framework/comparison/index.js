@@ -11,6 +11,10 @@ export default class Comparison {
     this.score = helper.calculateScore(this, weights);
   }
 
+  get framework() {
+    return this.other;
+  }
+
   get missingDomains() {
     return helper.setDifference(this.base.domains, this.other.domains);
   }

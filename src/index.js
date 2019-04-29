@@ -5,7 +5,10 @@ import { applyMiddleware, compose, combineReducers,createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import thunkMiddleware from 'redux-thunk';
-import { ConnectedRouter } from 'connected-react-router'
+import { ConnectedRouter } from 'connected-react-router';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+
+import theme from './theme';
 import rootReducer from './reducers';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
@@ -38,7 +41,9 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <App />
+      <MuiThemeProvider theme={theme}>
+        <App />
+      </MuiThemeProvider>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')

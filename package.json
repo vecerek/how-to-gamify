@@ -11,6 +11,7 @@
     "test": "NODE_ENV=test ava"
   },
   "dependencies": {
+    "@material-ui/core": "3.9.3",
     "connected-react-router": "6.4.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",

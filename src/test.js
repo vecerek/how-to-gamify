@@ -4,5 +4,6 @@ const browserEnv = require('browser-env');
 const identityObjProxy = require('identity-obj-proxy');
 
 require.extensions['.css'] = module => Object.assign(module, { exports: identityObjProxy });
+require.extensions['.svg'] = module => Object.assign(module, { exports: '#' });
 
 browserEnv();

@@ -1,11 +1,15 @@
 import test from 'ava';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createShallow } from '@material-ui/core/test-utils';
 import Home from './';
 
+let shallow;
+
+test.before(() => {
+  shallow = createShallow();
+});
+
 test('renders without crashing', (t) => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Home />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  const wrapper = shallow(<Home />);
   t.pass();
 });

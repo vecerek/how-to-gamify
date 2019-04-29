@@ -1,16 +1,15 @@
-/* eslint-disable no-console */
-import path from 'path';
-import jsonRefParser from 'json-schema-ref-parser';
+import Framework from './framework';
+import ReferenceFramework from './framework/reference-framework'
 
-const DATA_PATH = path.resolve(__dirname, 'data');
-
-(async function run() {
-  try {
-    const frameworksPath = path.resolve(DATA_PATH, 'frameworks.json');
-    const frameworks = await jsonRefParser.dereference(frameworksPath);
-
-    console.log(frameworks['1'].features);
-  } catch (e) {
-    console.log(e);
+export default class Recommender {
+  constructor(frameworks, reference) {
+    this.reference = ReferenceFramework.create(reference);
+    this.frameworks = frameworks.map(f => Framework.create(f));
   }
-}());
+
+  get results() {
+    return this.frameworks
+      .map(f => this.reference.compare(f))
+      .sort((a, b) => b.score - a.score);
+  }
+}

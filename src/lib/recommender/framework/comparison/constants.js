@@ -7,12 +7,3 @@ export const DEFAULT_WEIGHTS = {
 export const MATCH = 1;
 export const PARTIAL_MATCH = 0.5;
 export const MISMATCH = 0;
-
-export const props = {
-  domains: {
-    GENERIC: 'generic',
-  },
-  targets: {
-    GENERAL: 'general',
-  },
-};

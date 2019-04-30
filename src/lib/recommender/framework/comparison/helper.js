@@ -1,6 +1,7 @@
 import {
-  DEFAULT_WEIGHTS, MATCH, PARTIAL_MATCH, MISMATCH, props,
+  DEFAULT_WEIGHTS, MATCH, PARTIAL_MATCH, MISMATCH,
 } from './constants';
+import { props } from '../../constants';
 
 const compareSets = (base, other, partialConditionFn) => {
   const results = Array.from(base).reduce(

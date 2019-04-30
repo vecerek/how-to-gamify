@@ -7,13 +7,18 @@ import Stepper from '@material-ui/core/Stepper';
 import FeatureStep from './components/FeatureStep';
 import DomainStep from './components/DomainStep';
 import TargetStep from './components/TargetStep';
+import Sidebar from './components/Sidebar';
 
 const styles = {
   container: {
-    margin: '50px auto',
+    display: 'flex',
+  },
+  stepperContainer: {
+    margin: '0 auto',
     maxWidth: '920px',
+    padding: '50px',
     width: '100%',
-  }
+  },
 }
 
 class GetStarted extends React.Component {
@@ -27,11 +32,14 @@ class GetStarted extends React.Component {
 
     return (
       <div className={classes.container}>
-        <Stepper activeStep={activeStep} orientation="vertical">
-          <FeatureStep />
-          <DomainStep />
-          <TargetStep />
-        </Stepper>
+        <div className={classes.stepperContainer}>
+          <Stepper activeStep={activeStep} orientation="vertical">
+            <FeatureStep />
+            <DomainStep />
+            <TargetStep />
+          </Stepper>
+        </div>
+        <Sidebar />
       </div>
     );
   }

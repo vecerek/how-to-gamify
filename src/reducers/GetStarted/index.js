@@ -14,7 +14,6 @@ const initialState = {
 };
 
 const createFeature = ({ feature: { id }, value }) => ({ id, value });
-const updateFramework = (framework, obj) => Object.assign({}, framework, obj);
 
 export default (state = initialState, action = {}) => {
   switch(action.type) {
@@ -32,11 +31,12 @@ export default (state = initialState, action = {}) => {
     case types.REGISTER_FEATURE:
       return {
         ...state,
-        userDefinedFramework: updateFramework(state.userDefinedFramework, {
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
           features: state.userDefinedFramework.features.concat(
             createFeature(action.payload)
           ),
-        }),
+        },
         currentFeatureIndex: state.currentFeatureIndex + 1,
         activeStep: state.currentFeatureIndex === state.features.length - 1
           ? state.activeStep + 1
@@ -45,20 +45,32 @@ export default (state = initialState, action = {}) => {
     case types.REGISTER_DOMAINS:
       return {
         ...state,
-        userDefinedFramework: updateFramework(
-          state.userDefinedFramework,
-          { domains: action.payload }
-        ),
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
+          domains: action.payload,
+        },
         activeStep: state.activeStep + 1,
       }
     case types.REGISTER_TARGETS:
       return {
         ...state,
-        userDefinedFramework: updateFramework(
-          state.userDefinedFramework,
-          { targets: action.payload }
-        ),
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
+          targets: action.payload,
+        },
         activeStep: state.activeStep + 1,
+      }
+    case types.UPDATE_FEATURE:
+      return {
+        ...state,
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
+          features: state.userDefinedFramework.features.map(
+            f => f.id === action.payload.id
+              ? action.payload
+              : f
+          ),
+        },
       }
     default:
       return state;

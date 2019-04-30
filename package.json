@@ -21,6 +21,7 @@
     "history": "4.9.0",
     "is-wsl": "^1.1.0",
     "json-schema-ref-parser": "6.1.0",
+    "prop-types": "15.7.2",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.0",
     "react-dev-utils": "^9.0.0",

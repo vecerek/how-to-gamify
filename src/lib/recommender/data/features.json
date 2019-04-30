@@ -65,11 +65,11 @@
   },
   "profiling": {
     "id": "profiling",
-    "description": ""
+    "description": "The process of identifying players and player personas."
   },
   "taxonomy": {
     "id": "taxonomy",
-    "description": ""
+    "description": "A classification/taxonomy of player types."
   },
   "storytelling": {
     "id": "storytelling",

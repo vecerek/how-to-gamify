@@ -40,6 +40,15 @@ export default (state = initialState, action = {}) => {
           ? state.activeStep + 1
           : state.activeStep,
       }
+    case types.REGISTER_DOMAINS:
+      return {
+        ...state,
+        userDefinedFramework: updateFramework(
+          state.userDefinedFramework,
+          { domains: action.payload }
+        ),
+        activeStep: state.activeStep + 1,
+      }
     default:
       return state;
   }

@@ -61,6 +61,8 @@ class FeatureStep extends React.Component {
       totalFeatures
     } = this.props;
 
+    const showContent = !isLoading && currentFeatureNumber <= totalFeatures;
+
     return (
       <Step {...this.props.ownProps}>
         <StepLabel>Select the features you need</StepLabel>
@@ -68,7 +70,7 @@ class FeatureStep extends React.Component {
           <Typography>
             In this step, you will be presented with numerous features a gamification design framework might incorporate in its methodologies. Based on your project requirements, select how much in detail should the framework tackle the particular feature.
           </Typography>
-          {!isLoading && (
+          {showContent && (
             <React.Fragment>
               <div className={classes.featureContainer} >
                 <div className={classes.descriptionContainer}>

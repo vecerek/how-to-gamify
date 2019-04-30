@@ -20,4 +20,9 @@ export const loadData = () => async (dispatch) => {
 export const registerFeature = (feature, value) => ({
   type: types.REGISTER_FEATURE,
   payload: { feature, value },
-})
+});
+
+export const registerDomains = domains => ({
+  type: types.REGISTER_DOMAINS,
+  payload: domains
+});

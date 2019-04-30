@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history'
-import { applyMiddleware, compose, combineReducers,createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { connectRouter, routerMiddleware } from 'connected-react-router'
+import { routerMiddleware } from 'connected-react-router'
 import thunkMiddleware from 'redux-thunk';
 import { ConnectedRouter } from 'connected-react-router';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 
 import theme from './theme';
-import rootReducer from './reducers';
+import createRootReducer from './reducers';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
@@ -29,14 +29,8 @@ if (process.env.NODE_ENV === 'development') {
   );
 }
 
-const store = createStore(
-  combineReducers(
-    Object.assign({}, rootReducer, {
-      router: connectRouter(history),
-    })
-  ),
-  compose(applyMiddleware(...middleware))
-);
+const enhancer = applyMiddleware(...middleware);
+const store = createStore(createRootReducer(history), undefined, enhancer);
 
 ReactDOM.render(
   <Provider store={store}>

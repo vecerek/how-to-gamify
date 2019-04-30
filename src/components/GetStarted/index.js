@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import FeatureStep from './components/FeatureStep';
 import DomainStep from './components/DomainStep';
+import TargetStep from './components/TargetStep';
 
 const styles = {
   container: {
@@ -29,7 +30,7 @@ class GetStarted extends React.Component {
         <Stepper activeStep={activeStep} orientation="vertical">
           <FeatureStep />
           <DomainStep />
-          <DomainStep />
+          <TargetStep />
         </Stepper>
       </div>
     );

@@ -6,6 +6,8 @@ const initialState = {
   isLoading: true,
   userDefinedFramework: {
     features: [],
+    domains: [],
+    targets: [],
   },
   activeStep: 0,
   currentFeatureIndex: 0,
@@ -46,6 +48,15 @@ export default (state = initialState, action = {}) => {
         userDefinedFramework: updateFramework(
           state.userDefinedFramework,
           { domains: action.payload }
+        ),
+        activeStep: state.activeStep + 1,
+      }
+    case types.REGISTER_TARGETS:
+      return {
+        ...state,
+        userDefinedFramework: updateFramework(
+          state.userDefinedFramework,
+          { targets: action.payload }
         ),
         activeStep: state.activeStep + 1,
       }

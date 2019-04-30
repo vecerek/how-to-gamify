@@ -26,3 +26,8 @@ export const registerDomains = domains => ({
   type: types.REGISTER_DOMAINS,
   payload: domains
 });
+
+export const registerTargets = targets => ({
+  type: types.REGISTER_TARGETS,
+  payload: targets
+});

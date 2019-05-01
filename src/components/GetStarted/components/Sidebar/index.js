@@ -5,15 +5,24 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import Chip from '@material-ui/core/Chip';
+import Divider from '@material-ui/core/Divider';
 import { titleize } from '../../../../lib/formatting';
 import * as actions from '../../../../actions/GetStarted';
 
 const styles = theme => ({
   container: {
     backgroundColor: '#f8f8f8',
-    minWidth: '320px',
-    padding: '20px',
+    minWidth: '300px',
+    padding: '50px',
     width: '20%',
+  },
+  chip: {
+    margin: theme.spacing.unit,
+  },
+  divider: {
+    marginBottom: theme.spacing.unit,
+    marginTop: theme.spacing.unit,
   }
 });
 
@@ -28,6 +37,11 @@ class Sidebar extends React.Component {
     const nextValue = values[nextIndex];
 
     dispatch(actions.updateFeature(feature, nextValue));
+  }
+
+  handleDeleteDomain = (d) => () => {
+    const { dispatch } = this.props;
+    dispatch(actions.removeDomain(d));
   }
 
   render() {
@@ -56,9 +70,20 @@ class Sidebar extends React.Component {
             label={titleize(id)}
           />
         ))}
+        <Divider className={classes.divider} />
         <Typography variant="subtitle1" gutterBottom>
           Domains:
         </Typography>
+        {framework.domains.map(d => (
+          <Chip
+            key={d}
+            label={titleize(d)}
+            onDelete={this.handleDeleteDomain(d)}
+            className={classes.chip}
+            color="primary"
+          />
+        ))}
+        <Divider />
         <Typography variant="subtitle1" gutterBottom>
           Targets:
         </Typography>

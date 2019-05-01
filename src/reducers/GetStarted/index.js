@@ -72,6 +72,14 @@ export default (state = initialState, action = {}) => {
           ),
         },
       }
+    case types.REMOVE_DOMAIN:
+      return {
+        ...state,
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
+          domains: state.userDefinedFramework.domains.filter(d => d !== action.payload)
+        }
+      }
     default:
       return state;
   }

@@ -36,3 +36,8 @@ export const updateFeature = (feature, value) => ({
   type: types.UPDATE_FEATURE,
   payload: { id: feature, value },
 });
+
+export const removeDomain = domain => ({
+  type: types.REMOVE_DOMAIN,
+  payload: domain,
+});

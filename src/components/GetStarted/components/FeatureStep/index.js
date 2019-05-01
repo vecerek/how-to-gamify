@@ -17,6 +17,7 @@ const styles = theme => ({
   descriptionContainer: {
     alignSelf: 'flex-start',
     margin: '30px 0 50px 0',
+    minHeight: '145px',
   },
   answerContainer: {
     alignSelf: 'center',

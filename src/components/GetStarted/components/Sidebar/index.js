@@ -13,7 +13,9 @@ import * as actions from '../../../../actions/GetStarted';
 const styles = theme => ({
   container: {
     backgroundColor: '#f8f8f8',
+    flex: '0 0 300px',
     minWidth: '300px',
+    overflow: 'auto',
     padding: '50px',
     width: '20%',
   },

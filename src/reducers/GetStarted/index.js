@@ -80,7 +80,7 @@ export default (state = initialState, action = {}) => {
           domains: state.userDefinedFramework.domains.filter(d => d !== action.payload)
         }
       }
-      case types.REMOVE_TARGET:
+    case types.REMOVE_TARGET:
       return {
         ...state,
         userDefinedFramework: {

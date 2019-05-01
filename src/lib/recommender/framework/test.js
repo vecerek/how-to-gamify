@@ -107,7 +107,7 @@ test('#displayName returns the display_name when available', (t) => {
   t.is(framework.displayName, 'Framework A');
 });
 
-test('#displayName returns a combination of author and title when display name is not available', (t) => {
+test('#displayName returns the book/paper title when display_name is not available', (t) => {
   const framework = Framework.create({
     id: 'frameworkA',
     title: 'The title of the paper/book the framework had been published in',
@@ -117,5 +117,5 @@ test('#displayName returns a combination of author and title when display name i
     features: [],
   });
 
-  t.is(framework.displayName, 'J. Smith: The title of the paper/book the framework had been published in');
+  t.is(framework.displayName, 'The title of the paper/book the framework had been published in');
 });

@@ -35,7 +35,7 @@ export default class Framework extends Dependency {
   }
 
   get displayName() {
-    return this._displayName || `${this.displayAuthor}: ${this.title}`;
+    return this._displayName || this.title;
   }
 
   compare(other, weights = DEFAULT_WEIGHTS) {

@@ -52,7 +52,7 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const { classes, framework } = this.props;
+    const { classes, framework, locked } = this.props;
 
     return (
       <div className={classes.container}>
@@ -70,6 +70,7 @@ class Sidebar extends React.Component {
                 checked={value !== 'U'}
                 onChange={this.handleCheck(id, value)}
                 value={id}
+                disabled={!!locked}
                 indeterminate={value === 'I' ? true : null}
                 color="primary"
               />
@@ -85,7 +86,7 @@ class Sidebar extends React.Component {
           <Chip
             key={d}
             label={titleize(d)}
-            onDelete={this.handleDeleteDomain(d)}
+            onDelete={locked ? null : this.handleDeleteDomain(d)}
             className={classes.chip}
             color="primary"
           />
@@ -98,7 +99,7 @@ class Sidebar extends React.Component {
           <Chip
             key={t}
             label={titleize(t)}
-            onDelete={this.handleDeleteTarget(t)}
+            onDelete={locked ? null : this.handleDeleteTarget(t)}
             className={classes.chip}
             color="primary"
           />
@@ -113,6 +114,7 @@ const mapStateToProps = ({ getStarted: state }) => ({
 });
 
 Sidebar.propTypes = {
+  locked: PropTypes.bool,
   framework: PropTypes.shape({
     features: PropTypes.arrayOf(
       PropTypes.shape({

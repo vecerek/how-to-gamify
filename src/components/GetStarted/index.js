@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { push } from 'connected-react-router';
 import * as actions from '../../actions/GetStarted';
 import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -43,38 +44,41 @@ class GetStarted extends React.Component {
   }
 
   handleFinish = () => {
-
+    const { dispatch } = this.props;
+    dispatch(push('/results'));
   }
 
   render() {
     const { classes, activeStep, setupFinished } = this.props;
 
+    const showStepper = !setupFinished;
+    const showReview = setupFinished;
+
     return (
       <div className={classes.container}>
-        {setupFinished
-          ? (
-            <div className={classes.reviewContainer}>
-              <Typography variant="subtitle1">Please, review you configuration in the sidebar and hit 'Finish' when done.</Typography>
-              <Button
-                className={classes.btn}
-                variant="contained"
-                size="medium"
-                color="primary"
-                onClick={() => this.handleFinish()}
-              >
-                Finish
-              </Button>
-            </div>
-          ) : (
-            <div className={classes.stepperContainer}>
-              <Stepper activeStep={activeStep} orientation="vertical">
-                <FeatureStep />
-                <DomainStep />
-                <TargetStep />
-              </Stepper>
-            </div>
-          )
-        }
+        {showStepper && (
+          <div className={classes.stepperContainer}>
+            <Stepper activeStep={activeStep} orientation="vertical">
+              <FeatureStep />
+              <DomainStep />
+              <TargetStep />
+            </Stepper>
+          </div>
+        )}
+        {showReview && (
+          <div className={classes.reviewContainer}>
+            <Typography variant="subtitle1">Please, review you configuration in the sidebar and hit 'Finish' when done.</Typography>
+            <Button
+              className={classes.btn}
+              variant="contained"
+              size="medium"
+              color="primary"
+              onClick={() => this.handleFinish()}
+            >
+              Finish
+            </Button>
+          </div>
+        )}
         <Sidebar />
       </div>
     );

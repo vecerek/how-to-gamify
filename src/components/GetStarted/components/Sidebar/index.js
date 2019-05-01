@@ -55,7 +55,7 @@ class Sidebar extends React.Component {
     return (
       <div className={classes.container}>
         <Typography variant="h6" gutterBottom>
-          Framework under construction
+          Framework configuration
         </Typography>
         <Typography variant="subtitle1" gutterBottom>
           Features:

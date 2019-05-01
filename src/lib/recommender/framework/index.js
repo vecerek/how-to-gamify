@@ -17,8 +17,8 @@ export default class Framework extends Dependency {
 
     this._displayName = framework.display_name;
     this.description = framework.description;
-    this.domains = createSet(framework.application_area);
-    this.targets = createSet(framework.target);
+    this.domains = createSet(framework.application_area || framework.domains);
+    this.targets = createSet(framework.target || framework.targets);
     this.features = framework.features.reduce(
       (acc, f) => Object.assign(acc, { [f.id]: new Feature(f) }),
       {},

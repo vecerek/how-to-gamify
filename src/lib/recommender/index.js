@@ -26,8 +26,10 @@ export default class Recommender {
   }
 
   get results() {
-    return this.frameworks
-      .map(f => this.reference.compare(f))
-      .sort((a, b) => b.score - a.score);
+    return Promise.resolve(
+      this.frameworks
+        .map(f => this.reference.compare(f))
+        .sort((a, b) => b.score - a.score)
+    );
   }
 }

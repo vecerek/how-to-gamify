@@ -9,7 +9,7 @@ test.before(async () => {
   frameworks = Object.values(await loadData('frameworks'));
 });
 
-test('the score of an identical framework should be 1', (t) => {
+test('the score of an identical framework should be 1', async (t) => {
   const referenceFramework = {
     id: 'user-defined',
     application_area: ['learning'],
@@ -40,7 +40,7 @@ test('the score of an identical framework should be 1', (t) => {
   };
 
   const recommendr = new Recommender(frameworks, referenceFramework);
-  const results = recommendr.results;
+  const results = await recommendr.results;
   const bestFit = results[0];
 
   t.is(bestFit.framework.id, 'mora_2016');

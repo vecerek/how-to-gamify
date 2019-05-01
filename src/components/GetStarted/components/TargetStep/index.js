@@ -60,7 +60,7 @@ class targetStep extends React.Component {
     }));
   }
 
-  handleFinish = () => {
+  handleNext = () => {
     const { dispatch } = this.props;
     dispatch(actions.registerTargets(this.state.chosenTargets));
   }
@@ -110,9 +110,9 @@ class targetStep extends React.Component {
               size="medium"
               color="primary"
               className={classes.btn}
-              onClick={() => this.handleFinish()}
+              onClick={() => this.handleNext()}
             >
-              Finish
+              Next
             </Button>
           </div>
         </StepContent>

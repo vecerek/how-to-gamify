@@ -44,6 +44,11 @@ class Sidebar extends React.Component {
     dispatch(actions.removeDomain(d));
   }
 
+  handleDeleteTarget = (t) => () => {
+    const { dispatch } = this.props;
+    dispatch(actions.removeTarget(t));
+  }
+
   render() {
     const { classes, framework } = this.props;
 
@@ -83,10 +88,19 @@ class Sidebar extends React.Component {
             color="primary"
           />
         ))}
-        <Divider />
+        <Divider className={classes.divider} />
         <Typography variant="subtitle1" gutterBottom>
           Targets:
         </Typography>
+        {framework.targets.map(t => (
+          <Chip
+            key={t}
+            label={titleize(t)}
+            onDelete={this.handleDeleteTarget(t)}
+            className={classes.chip}
+            color="primary"
+          />
+        ))}
       </div>
     );
   }

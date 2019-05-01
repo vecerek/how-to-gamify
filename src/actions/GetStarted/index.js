@@ -41,3 +41,8 @@ export const removeDomain = domain => ({
   type: types.REMOVE_DOMAIN,
   payload: domain,
 });
+
+export const removeTarget = target => ({
+  type: types.REMOVE_TARGET,
+  payload: target,
+});

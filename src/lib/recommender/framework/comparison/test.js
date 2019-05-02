@@ -64,3 +64,8 @@ test('#missingTargets returns the difference in targets', (t) => {
 
   t.deepEqual(comparison.missingTargets, ['designer']);
 });
+
+test.todo('#missingFeatures returns a list of feature ids that are missing from the compared framework');
+test.todo('#partiallyMatchedFeatures returns a list of feature ids that have a partial match with the framework');
+test.todo('#matchedFeatures returns a list of feature ids that match with the framework');
+test.todo('#extraFeatures returns a list of feature ids that are explicit in the compared framework but not in the reference framework');

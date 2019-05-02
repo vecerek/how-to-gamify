@@ -22,3 +22,8 @@ export const recommendFrameworks = () => async (dispatch, getState) => {
     dispatch({ type: types.RECOMMEND_FRAMEWORK_FAILURE });
   }
 }
+
+export const toggleDetails = (open, frameworkId) => ({
+  type: types.TOGGLE_DETAILS,
+  payload: { id: frameworkId, open },
+});

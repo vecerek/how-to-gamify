@@ -8,6 +8,7 @@ import Switch from '@material-ui/core/Switch';
 import Grid from '@material-ui/core/Grid';
 import Result from './components/Result';
 import Sidebar from '../GetStarted/components/Sidebar';
+import DetailsDrawer from './components/DetailsDrawer';
 import * as actions from '../../actions/Results';
 
 const styles = theme => ({
@@ -55,30 +56,33 @@ class Results extends React.Component {
     const { showConfiguration } = this.state;
 
     return (
-      <div className={classes.container}>
-        <div className={classes.resultsContainer}>
-          <FormControlLabel
-            className={classes.switch}
-            control={
-              <Switch
-                checked={showConfiguration}
-                onChange={this.switchConfiguration()}
-                value="configurationVisibility"
-                color="primary"
-              />
-            }
-            label="Show framework configuration"
-          />
-          <Grid container spacing={24}>
-            {recommendations.map(recommendation =>
-              <Grid item xs={12} sm={4} key={recommendation.other.id}>
-                <Result data={recommendation} />
-              </Grid>
-            )}
-          </Grid>
+      <React.Fragment>
+        <div className={classes.container}>
+          <div className={classes.resultsContainer}>
+            <FormControlLabel
+              className={classes.switch}
+              control={
+                <Switch
+                  checked={showConfiguration}
+                  onChange={this.switchConfiguration()}
+                  value="configurationVisibility"
+                  color="primary"
+                />
+              }
+              label="Show requirements"
+            />
+            <Grid container spacing={24}>
+              {recommendations.map(recommendation =>
+                <Grid item xs={12} sm={4} key={recommendation.other.id}>
+                  <Result data={recommendation} />
+                </Grid>
+              )}
+            </Grid>
+          </div>
+          {showConfiguration && <Sidebar locked />}
         </div>
-        {showConfiguration && <Sidebar locked />}
-      </div>
+        <DetailsDrawer />
+      </React.Fragment>
     );
   }
 }

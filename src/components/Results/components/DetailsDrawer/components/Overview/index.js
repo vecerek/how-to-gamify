@@ -8,6 +8,7 @@ const styles = {
   overview: {
     borderRight: '1px solid #ccc',
     flex: '0 1 25%',
+    minWidth: '200px',
     padding: '20px',
   },
   inline: {

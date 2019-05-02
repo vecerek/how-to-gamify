@@ -2,7 +2,7 @@
 import Registry from '../registry';
 import Dependency from '../dependency';
 import Feature from '../feature';
-import { DEFAULT_WEIGHTS } from './comparison/constants';
+import { getDefaultWeights } from './helper';
 import Comparison from './comparison';
 
 const frameworkRegistry = new Registry(
@@ -38,7 +38,7 @@ export default class Framework extends Dependency {
     return this._displayName || this.title;
   }
 
-  compare(other, weights = DEFAULT_WEIGHTS) {
+  compare(other, weights = getDefaultWeights(Object.keys(this.features).length)) {
     return new Comparison(this, other, weights);
   }
 }

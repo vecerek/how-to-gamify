@@ -46,12 +46,12 @@ test('#compare with default weights returns the correct comparison object', (t) 
   });
 
   /*
-    Domain: partial match => s(d): 0.5 * w(d)
-    Target: full match => s(t): 1 * w(t)
-    Features: 2 partial matches, 1 full match => s(f): 2 * w(f)
+    Domain: partial match => s(d): 0.5 * w(d) | 0.5 * 5
+    Target: full match => s(t): 1 * w(t) | 1 * 5
+    Features: 2 partial matches, 1 full match => s(f): 2 * w(f) | 1
     Total: sum of scores (s(d) + s(t) + s(f)) / sum of max potential scores (w(d)+w(t)+|f|*w(f))
    */
-  t.deepEqual(frameworkA.compare(frameworkB).score, 3.5 / 7);
+  t.deepEqual(frameworkA.compare(frameworkB).score, 9.5 / 15);
 });
 
 test('#compare with custom weights returns the correct result', (t) => {

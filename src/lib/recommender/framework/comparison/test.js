@@ -2,8 +2,14 @@ import test from 'ava';
 import Comparison from './index';
 import Framework from '../index';
 import {
-  DEFAULT_WEIGHTS, MATCH, PARTIAL_MATCH, MISMATCH,
+  MATCH, PARTIAL_MATCH, MISMATCH,
 } from './constants';
+
+const weights = {
+  domains: 1,
+  targets: 1,
+  features: 1,
+};
 
 const frameworkA = Framework.create({
   application_area: ['business'],
@@ -30,7 +36,7 @@ const frameworkB = Framework.create({
 });
 
 test('initializes comparison object correcty', (t) => {
-  const comparison = new Comparison(frameworkA, frameworkB, DEFAULT_WEIGHTS);
+  const comparison = new Comparison(frameworkA, frameworkB, weights);
 
   t.is(comparison.base, frameworkA);
   t.is(comparison.other, frameworkB);
@@ -54,13 +60,13 @@ test('initializes comparison object correcty', (t) => {
 });
 
 test('#missingDomains returns the difference in domains', (t) => {
-  const comparison = new Comparison(frameworkA, frameworkB);
+  const comparison = new Comparison(frameworkA, frameworkB, weights);
 
   t.deepEqual(comparison.missingDomains, ['business']);
 });
 
 test('#missingTargets returns the difference in targets', (t) => {
-  const comparison = new Comparison(frameworkA, frameworkB);
+  const comparison = new Comparison(frameworkA, frameworkB, weights);
 
   t.deepEqual(comparison.missingTargets, ['designer']);
 });

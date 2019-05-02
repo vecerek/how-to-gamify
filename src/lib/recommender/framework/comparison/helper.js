@@ -1,5 +1,5 @@
 import {
-  DEFAULT_WEIGHTS, MATCH, PARTIAL_MATCH, MISMATCH,
+  MATCH, PARTIAL_MATCH, MISMATCH,
 } from './constants';
 import { props } from '../../constants';
 
@@ -47,7 +47,7 @@ export const compareFeatures = (base, other) => Object.keys(base.features).reduc
   {},
 );
 
-export const calculateScore = (comparison, weights = DEFAULT_WEIGHTS) => {
+export const calculateScore = (comparison, weights) => {
   const { domains, targets, features } = comparison;
   const domainScore = weights.domains * Math.max(...Object.values(domains));
   const targetScore = weights.targets * Math.max(...Object.values(targets));

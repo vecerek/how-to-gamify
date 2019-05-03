@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
+import green from '@material-ui/core/colors/green';
 import { titleize } from '../../../../lib/formatting';
 import * as actions from '../../../../actions/GetStarted';
 
@@ -25,7 +27,13 @@ const styles = theme => ({
   divider: {
     marginBottom: theme.spacing.unit,
     marginTop: theme.spacing.unit,
-  }
+  },
+  checked: {
+    color: green[500],
+    '&$checked': {
+      color: green[500],
+    },
+  },
 });
 
 class Sidebar extends React.Component {
@@ -72,6 +80,9 @@ class Sidebar extends React.Component {
                 value={id}
                 disabled={!!locked}
                 indeterminate={value === 'I' ? true : null}
+                className={classnames({
+                  [classes.checked]: value === 'E' && !locked,
+                })}
                 color="primary"
               />
             }

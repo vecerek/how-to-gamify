@@ -7,7 +7,6 @@ import CardHeader from '@material-ui/core/CardHeader';
 // import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import LinkIcon from '@material-ui/icons/OpenInNew';
 import Button from '@material-ui/core/Button';
@@ -23,6 +22,11 @@ const styles = theme => ({
   },
   actions: {
     display: 'flex',
+    justifyContent: 'space-between',
+    padding: '16px',
+  },
+  btn: {
+    margin: theme.spacing.unit,
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -68,16 +72,17 @@ class Result extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton
-            aria-label="Read in a new tab"
+          <Button
+            className={classes.button}
+            aria-label="Open in a new tab"
             href={framework.url}
             target="_blank"
             rel="nofollow noopener"
           >
-            <LinkIcon />
-          </IconButton>
+            <LinkIcon style={{ marginRight: '5px' }} />
+            Read
+          </Button>
           <Button
-            size="small"
             color="primary"
             onClick={this.handleOpenDetails()}
           >

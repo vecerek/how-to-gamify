@@ -88,7 +88,6 @@ class Sidebar extends React.Component {
             label={titleize(d)}
             onDelete={locked ? null : this.handleDeleteDomain(d)}
             className={classes.chip}
-            color="primary"
           />
         ))}
         <Divider className={classes.divider} />
@@ -101,7 +100,6 @@ class Sidebar extends React.Component {
             label={titleize(t)}
             onDelete={locked ? null : this.handleDeleteTarget(t)}
             className={classes.chip}
-            color="primary"
           />
         ))}
       </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { withStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
 import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 import AvailabilityIndicator from '../../../../../shared/AvailabilityIndicator';
@@ -16,10 +18,14 @@ const styles = theme => ({
   },
   chip: {
     margin: theme.spacing.unit,
+    cursor: 'pointer',
   },
   iconHeading: {
     display: 'flex',
     alignItems: 'center',
+  },
+  tooltip: {
+    backgroundColor: theme.palette.common.black,
   },
 });
 
@@ -38,7 +44,7 @@ const getHeading = variant => {
   }
 };
 
-const Features = ({ classes, features, variant, count }) => {
+const Features = ({ classes, features, variant, count, featureDefinitions }) => {
   if (features.length === 0) return null;
 
   const heading = getHeading(variant);
@@ -50,16 +56,30 @@ const Features = ({ classes, features, variant, count }) => {
         {`${heading} (${features.length}/${count})`}
       </Typography>
       {features.map(feature =>
-        <Chip
+        <Tooltip
           key={feature}
-          label={titleize(feature)}
-          className={classes.chip}
-          variant="outlined"
-        />
+          classes={{ tooltip: classes.tooltip }}
+          interactive
+          title={
+            featureDefinitions
+              .find(({ id }) => id === feature)
+              .description
+          }
+        >
+          <Chip
+            label={titleize(feature)}
+            className={classes.chip}
+            variant="outlined"
+          />
+        </Tooltip>
       )}
     </div>
   );
 };
+
+const mapStateToProps = state => ({
+  featureDefinitions: state.getStarted.features,
+});
 
 Features.propTypes = {
   classes: PropTypes.object.isRequired,
@@ -68,4 +88,4 @@ Features.propTypes = {
   count: PropTypes.number.isRequired,
 };
 
-export default withStyles(styles)(Features);
+export default connect(mapStateToProps)(withStyles(styles)(Features));

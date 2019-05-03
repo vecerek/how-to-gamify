@@ -14,7 +14,7 @@ import green from '@material-ui/core/colors/green';
 const styles = {
   icon: {
     fontSize: '18px',
-    marginRight: '5px',
+    verticalAlign: 'top',
   },
   match: {
     color: green[500],
@@ -45,15 +45,28 @@ const getIcon = variant => {
   }
 }
 
-const AvailabilityIndicator = ({ classes, variant }) => {
+const AvailabilityIndicator = ({ classes, variant, position }) => {
   const Icon = getIcon(variant);
+  const inlineStyle = position === 'left'
+    ? { marginRight: '5px' }
+    : { marginLeft: '5px' };
 
-  return <Icon className={classnames(classes.icon, classes[variant])} />
+  return (
+    <Icon
+      className={classnames(classes.icon, classes[variant])}
+      style={inlineStyle}
+    />
+  );
 };
 
 AvailabilityIndicator.propTypes = {
   classes: PropTypes.object.isRequired,
   variant: PropTypes.oneOf(['match', 'mismatch', 'partial', 'extra']).isRequired,
+  position: PropTypes.oneOf(['left', 'right']),
+};
+
+AvailabilityIndicator.defaultProps = {
+  position: 'left',
 };
 
 export default withStyles(styles)(AvailabilityIndicator);

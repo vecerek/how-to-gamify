@@ -27,7 +27,7 @@ const getHeading = variant => {
   switch(variant) {
     case 'match':
       return 'Matching features';
-    case 'missing':
+    case 'mismatch':
       return 'Missing features';
     case 'partial':
       return 'Partially matched features';
@@ -64,7 +64,7 @@ const Features = ({ classes, features, variant, count }) => {
 Features.propTypes = {
   classes: PropTypes.object.isRequired,
   features: PropTypes.arrayOf(PropTypes.string).isRequired,
-  variant: PropTypes.oneOf(['match', 'missing', 'partial', 'extra']).isRequired,
+  variant: PropTypes.oneOf(['match', 'mismatch', 'partial', 'extra']).isRequired,
   count: PropTypes.number.isRequired,
 };
 

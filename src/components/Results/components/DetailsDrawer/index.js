@@ -60,7 +60,7 @@ class DetailsDrawer extends React.Component {
               count={featureCount}
             />
             <Features
-              variant="missing"
+              variant="mismatch"
               features={result.missingFeatures}
               count={featureCount}
             />

@@ -19,7 +19,7 @@ const styles = {
   match: {
     color: green[500],
   },
-  missing: {
+  mismatch: {
     color: red[500],
   },
   partial: {
@@ -34,7 +34,7 @@ const getIcon = variant => {
   switch(variant) {
     case 'match':
       return CheckIcon;
-    case 'missing':
+    case 'mismatch':
       return ClearIcon;
     case 'partial':
       return WarningIcon;
@@ -53,7 +53,7 @@ const AvailabilityIndicator = ({ classes, variant }) => {
 
 AvailabilityIndicator.propTypes = {
   classes: PropTypes.object.isRequired,
-  variant: PropTypes.oneOf(['match', 'missing', 'partial', 'extra']).isRequired,
+  variant: PropTypes.oneOf(['match', 'mismatch', 'partial', 'extra']).isRequired,
 };
 
 export default withStyles(styles)(AvailabilityIndicator);

@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import WarningIcon from '@material-ui/icons/Warning';
 import StarIcon from '@material-ui/icons/Star';
 import CheckIcon from '@material-ui/icons/Check';
+import ClearIcon from '@material-ui/icons/Clear';
 import red from '@material-ui/core/colors/red';
 import yellow from '@material-ui/core/colors/yellow';
 import blue from '@material-ui/core/colors/blue';
@@ -66,6 +67,7 @@ const getIcon = variant => {
     case 'match':
       return CheckIcon;
     case 'missing':
+      return ClearIcon;
     case 'partial':
       return WarningIcon;
     case 'extra':

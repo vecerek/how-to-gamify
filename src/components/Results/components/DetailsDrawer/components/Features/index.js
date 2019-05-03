@@ -102,7 +102,7 @@ const Features = ({ classes, features, variant, count }) => {
 Features.propTypes = {
   classes: PropTypes.object.isRequired,
   features: PropTypes.arrayOf(PropTypes.string).isRequired,
-  variant: PropTypes.oneOf(['missing', 'partial', 'extra']).isRequired,
+  variant: PropTypes.oneOf(['match', 'missing', 'partial', 'extra']).isRequired,
   count: PropTypes.number.isRequired,
 };
 

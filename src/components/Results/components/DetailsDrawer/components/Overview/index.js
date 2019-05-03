@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Attribute from './components/Attribute';
 
 const styles = {
   overview: {
@@ -10,12 +10,6 @@ const styles = {
     flex: '0 1 25%',
     minWidth: '200px',
     padding: '20px',
-  },
-  inline: {
-    display: 'inline-block',
-  },
-  dd: {
-    marginInlineStart: '10px',
   },
 };
 
@@ -28,51 +22,28 @@ const Overview = ({ classes, framework }) => (
       Overview
     </Typography>
     <dl>
-      <dt className={classes.inline}>
-        <Typography variant="subtitle2" gutterBottom>Title:</Typography>
-      </dt>
-      <dd className={classnames(classes.inline, classes.dd)}>
-        <Typography variant="body2" gutterBottom>
-          {framework.displayName}
-        </Typography>
-      </dd>
-      <br />
-      <dt className={classes.inline}>
-        <Typography variant="subtitle2" gutterBottom>Authors:</Typography>
-      </dt>
-      <dd className={classnames(classes.inline, classes.dd)}>
-        <Typography variant="body2" gutterBottom>
-          {framework.displayAuthor}
-        </Typography>
-      </dd>
-      <br />
-      <dt className={classes.inline}>
-        <Typography variant="subtitle2" gutterBottom>Year:</Typography>
-      </dt>
-      <dd className={classnames(classes.inline, classes.dd)}>
-        <Typography variant="body2" gutterBottom>
-          {framework.year}
-        </Typography>
-      </dd>
-      <br />
-      <dt className={classes.inline}>
-        <Typography variant="subtitle2" gutterBottom>Application area:</Typography>
-      </dt>
-      <dd className={classnames(classes.inline, classes.dd)}>
-        <Typography variant="body2" gutterBottom>
-          {Array.from(framework.domains).join(', ')}
-        </Typography>
-      </dd>
-      <br />
-      <dt className={classes.inline}>
-        <Typography variant="subtitle2" gutterBottom>Target:</Typography>
-      </dt>
-      <dd className={classnames(classes.inline, classes.dd)}>
-        <Typography variant="body2" gutterBottom>
-          {Array.from(framework.targets).join(', ')}
-        </Typography>
-      </dd>
-      <br />
+      <Attribute
+        name="Title"
+        value={framework.displayName}
+      />
+      <Attribute
+        name="Authors"
+        value={framework.displayAuthor}
+      />
+      <Attribute
+        name="Year"
+        value={framework.year}
+      />
+      <Attribute
+        name="Application area"
+        collection
+        value={Array.from(framework.domains)}
+      />
+      <Attribute
+        name="Target"
+        collection
+        value={Array.from(framework.targets)}
+      />
     </dl>
   </div>
 );

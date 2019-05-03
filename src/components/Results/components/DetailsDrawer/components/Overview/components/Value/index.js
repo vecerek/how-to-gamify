@@ -14,21 +14,22 @@ const styles = {
   },
 };
 
-const Value = ({ classes, children, indicator }) => (
+const Value = ({ classes, children, indicator, inline }) => (
   <React.Fragment>
-    <dd className={classnames(classes.inline, classes.dd)}>
+    <dd className={classnames(classes.dd, { [classes.inline]: inline })}>
       <Typography variant="body2" gutterBottom>
         {titleize(children.toString())}
         {indicator}
       </Typography>
     </dd>
-    <br />
+    {inline && <br />}
   </React.Fragment>
 );
 
 Value.propTypes = {
   classes: PropTypes.object.isRequired,
   indicator: PropTypes.element,
+  inline: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -37,6 +38,7 @@ Value.propTypes = {
 
 Value.defaultProps = {
   indicator: null,
+  inline: false,
 };
 
 export default withStyles(styles)(Value);

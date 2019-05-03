@@ -60,22 +60,28 @@ const Overview = ({ classes, result }) => {
       </Typography>
       <dl>
         <Attribute name="Title" >
-          <Value>{framework.displayName}</Value>
+          <Value inline>{framework.displayName}</Value>
         </Attribute>
         <Attribute name="Authors" >
-          <Value>{framework.displayAuthor}</Value>
+          <Value inline>{framework.displayAuthor}</Value>
         </Attribute>
         <Attribute name="Year" >
-          <Value>{framework.year}</Value>
+          <Value inline>{framework.year}</Value>
         </Attribute>
         <Attribute name="Application area" >
           {domains.map(({ value, indicator }) =>
-            <Value key={value} indicator={indicator}>{value}</Value>
+            <Value key={value} indicator={indicator} inline>{value}</Value>
           )}
         </Attribute>
         <Attribute name="Target" >
           {targets.map(({ value, indicator }) =>
-            <Value key={value} indicator={indicator}>{value}</Value>
+            <Value
+              key={value}
+              indicator={indicator}
+              inline={targets.length <= 1}
+            >
+              {value}
+            </Value>
           )}
         </Attribute>
       </dl>

@@ -1,6 +1,7 @@
 import Framework from './framework';
 import ReferenceFramework from './framework/reference-framework';
 import loadData from './utils';
+import * as patterns from './framework/comparison/constants';
 import { props } from './constants';
 
 export default class Recommender {
@@ -33,3 +34,7 @@ export default class Recommender {
     );
   }
 }
+
+Recommender.MATCH = patterns.MATCH;
+Recommender.PARTIAL_MATCH = patterns.PARTIAL_MATCH;
+Recommender.MISMATCH = patterns.MISMATCH;

@@ -47,7 +47,7 @@ class DetailsDrawer extends React.Component {
           tabIndex={0}
           role="button"
         >
-          <Overview framework={result.framework} />
+          <Overview result={result} />
           <div className={classes.featuresContainer}>
             <Features
               variant="match"

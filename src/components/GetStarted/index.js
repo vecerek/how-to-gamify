@@ -28,6 +28,7 @@ const styles = theme => ({
     flex: '1 1 100%',
     margin: '0 auto',
     minWidth: '0',
+    order: '0',
     padding: '50px',
     [theme.breakpoints.up('md')]: {
       overflow: 'auto',

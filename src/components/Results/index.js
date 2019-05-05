@@ -14,16 +14,23 @@ import * as actions from '../../actions/Results';
 const styles = theme => ({
   container: {
     display: 'flex',
-    height: '100vh',
+    flexDirection: 'column',
     justifyContent: 'space-between',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
+    },
   },
   resultsContainer: {
     display: 'flex',
     flex: '1 1 100%',
     flexDirection: 'column',
+    order: '2',
     overflow: 'auto',
     padding: '50px',
     paddingTop: '15px',
+    [theme.breakpoints.up('md')]: {
+      height: 'calc(100vh - 15px - 50px)',
+    },
   },
   switch: {
     alignSelf: 'flex-end',
@@ -74,7 +81,7 @@ class Results extends React.Component {
             />
             <Grid container spacing={24}>
               {recommendations.map(recommendation =>
-                <Grid item xs={12} sm={4} key={recommendation.other.id}>
+                <Grid item xs={12} sm={6} md={4} key={recommendation.other.id}>
                   <Result data={recommendation} />
                 </Grid>
               )}

@@ -17,6 +17,7 @@ const styles = theme => ({
     backgroundColor: '#f8f8f8',
     flex: '1 1 100%',
     height: 'calc(100vh - 2*50px)',
+    order: '1',
     padding: '50px',
     [theme.breakpoints.up('md')]: {
       flex: '0 1 450px',

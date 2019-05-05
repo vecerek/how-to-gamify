@@ -24,6 +24,11 @@ const styles = theme => ({
       height: '100vh',
     },
   },
+  reducedContainer: {
+    [theme.breakpoints.down('md')]: {
+      height: '150vh',
+    },
+  },
   stepperContainer: {
     flex: '1 1 100%',
     minWidth: '0',
@@ -37,8 +42,12 @@ const styles = theme => ({
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
-    height: 'calc(100vh - 2*50px)',
+    height: 'calc(50vh - 2*50px)',
     justifyContent: 'center',
+    padding: '50px',
+    [theme.breakpoints.up('md')]: {
+      height: 'calc(100vh - 2*50px)',
+    },
   },
   btn: {
     margin: theme.spacing.unit,
@@ -63,7 +72,10 @@ class GetStarted extends React.Component {
     const showReview = setupFinished;
 
     return (
-      <div className={classes.container}>
+      <div className={classnames({
+        [classes.container]: true,
+        [classes.reducedContainer]: showReview,
+      })}>
         {showStepper && (
           <div className={classes.stepperContainer}>
             <Stepper activeStep={activeStep} orientation="vertical">

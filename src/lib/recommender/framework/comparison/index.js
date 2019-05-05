@@ -32,7 +32,10 @@ export default class Comparison {
 
   get matchedFeatures() {
     return Object.keys(this.features)
-      .filter(id => this.features[id] === MATCH);
+      .filter(id =>
+        this.features[id] === MATCH
+        && this.other.features[id].canonicalValue !== UNAVAILABLE
+      );
   }
 
   get extraFeatures() {

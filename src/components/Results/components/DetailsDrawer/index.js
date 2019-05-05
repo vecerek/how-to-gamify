@@ -7,20 +7,28 @@ import Overview from './components/Overview';
 import Features from './components/Features';
 import * as actions from '../../../../actions/Results';
 
-const styles = {
+const styles = theme => ({
   container: {
     display: 'flex',
+    flexDirection: 'column',
     height: '355px',
     overflow: 'auto',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
+    },
   },
   featuresContainer: {
     display: 'flex',
     flexDirection: 'column',
     padding: '20px',
-    height: 'calc(100% - 2*20px)',
-    overflow: 'auto',
+    paddingTop: '0',
+    [theme.breakpoints.up('md')]: {
+      height: 'calc(100% - 2*20px)',
+      overflow: 'auto',
+      paddingTop: '20px',
+    },
   },
-};
+});
 
 class DetailsDrawer extends React.Component {
   toggleDrawer = open => () => {

@@ -7,14 +7,17 @@ import Value from './components/Value';
 import AvailabilityIndicator from '../../../../../shared/AvailabilityIndicator';
 import Recommender from '../../../../../../lib/recommender';
 
-const styles = {
+const styles = theme => ({
   overview: {
     borderRight: '1px solid #ccc',
     flex: '0 1 25%',
     minWidth: '200px',
     padding: '20px',
   },
-};
+  dl: {
+    marginBlockEnd: '0',
+  },
+});
 
 const getAttribsWithIcon = (attribs, result) =>
   Array.from(attribs)
@@ -58,7 +61,7 @@ const Overview = ({ classes, result }) => {
       <Typography variant="subtitle1" gutterBottom>
         Overview
       </Typography>
-      <dl>
+      <dl className={classes.dl}>
         <Attribute name="Title" >
           <Value inline>{framework.displayName}</Value>
         </Attribute>

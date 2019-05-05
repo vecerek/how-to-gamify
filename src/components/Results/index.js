@@ -19,6 +19,7 @@ const styles = theme => ({
   },
   resultsContainer: {
     display: 'flex',
+    flex: '1 1 100%',
     flexDirection: 'column',
     overflow: 'auto',
     padding: '50px',

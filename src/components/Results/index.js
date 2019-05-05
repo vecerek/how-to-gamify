@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import BackIcon from '@material-ui/icons/KeyboardArrowLeft';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import Grid from '@material-ui/core/Grid';
@@ -32,10 +34,14 @@ const styles = theme => ({
       height: 'calc(100vh - 15px - 50px)',
     },
   },
-  switch: {
-    alignSelf: 'flex-end',
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'space-between',
     marginBottom: '35px',
-  }
+  },
+  btn: {
+    margin: theme.spacing.unit,
+  },
 });
 
 class Results extends React.Component {
@@ -67,18 +73,27 @@ class Results extends React.Component {
       <React.Fragment>
         <div className={classes.container}>
           <div className={classes.resultsContainer}>
-            <FormControlLabel
-              className={classes.switch}
-              control={
-                <Switch
-                  checked={showConfiguration}
-                  onChange={this.switchConfiguration()}
-                  value="configurationVisibility"
-                  color="primary"
-                />
-              }
-              label="Show requirements"
-            />
+            <div className={classes.toolbar}>
+              <Button
+                size="small"
+                className={classes.btn}
+                href="/"
+              >
+                <BackIcon style={{ marginLeft: '5px' }} />
+                Back to home
+              </Button>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={showConfiguration}
+                    onChange={this.switchConfiguration()}
+                    value="configurationVisibility"
+                    color="primary"
+                  />
+                }
+                label="Show requirements"
+              />
+            </div>
             <Grid container spacing={24}>
               {recommendations.map(recommendation =>
                 <Grid item xs={12} sm={6} md={4} key={recommendation.other.id}>

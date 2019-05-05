@@ -65,6 +65,7 @@ class GetStarted extends React.Component {
   handleFinish = () => {
     const { dispatch } = this.props;
     dispatch(push('/results'));
+    window.scrollTo(0, 0);
   }
 
   render() {

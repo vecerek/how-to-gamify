@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
+import classnames from 'classnames';
 import * as actions from '../../actions/GetStarted';
 import { withStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
@@ -15,22 +16,29 @@ import Button from '@material-ui/core/Button';
 const styles = theme => ({
   container: {
     display: 'flex',
-    height: '100vh',
+    height: '200vh',
     justifyContent: 'space-between',
+    flexDirection: 'column',
+    [theme.breakpoints.up('md')]: {
+      flexDirection: 'row',
+      height: '100vh',
+    },
   },
   stepperContainer: {
+    flex: '1 1 100%',
     margin: '0 auto',
-    maxWidth: '920px',
-    overflow: 'auto',
+    minWidth: '0',
     padding: '50px',
-    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      overflow: 'auto',
+    },
   },
   reviewContainer: {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
+    height: 'calc(100vh - 2*50px)',
     justifyContent: 'center',
-    width: '100%',
   },
   btn: {
     margin: theme.spacing.unit,
@@ -66,7 +74,7 @@ class GetStarted extends React.Component {
           </div>
         )}
         {showReview && (
-          <div className={classes.reviewContainer}>
+          <div className={classnames(classes.stepperContainer, classes.reviewContainer)}>
             <Typography variant="subtitle1">Please, review you configuration in the sidebar and hit 'Finish' when done.</Typography>
             <Button
               className={classes.btn}

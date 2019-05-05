@@ -15,11 +15,13 @@ import * as actions from '../../../../actions/GetStarted';
 const styles = theme => ({
   container: {
     backgroundColor: '#f8f8f8',
-    flex: '0 0 300px',
-    minWidth: '300px',
-    overflow: 'auto',
+    flex: '1 1 100%',
+    height: 'calc(100vh - 2*50px)',
     padding: '50px',
-    width: '20%',
+    [theme.breakpoints.up('md')]: {
+      flex: '0 1 450px',
+      overflow: 'auto',
+    },
   },
   chip: {
     margin: theme.spacing.unit,

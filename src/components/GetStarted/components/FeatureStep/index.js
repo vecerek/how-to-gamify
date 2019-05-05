@@ -25,7 +25,7 @@ const styles = theme => ({
     textAlign: 'center',
   },
   featureName: {
-    fontSize: '4rem',
+    fontSize: '3rem',
     fontWeight: '100',
     marginBottom: '15px',
   },

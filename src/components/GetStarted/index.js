@@ -44,9 +44,11 @@ const styles = theme => ({
     flexDirection: 'column',
     height: 'calc(50vh - 2*50px)',
     justifyContent: 'center',
+    order: '2',
     padding: '50px',
     [theme.breakpoints.up('md')]: {
       height: 'calc(100vh - 2*50px)',
+      order: '0',
     },
   },
   btn: {

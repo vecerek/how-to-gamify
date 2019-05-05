@@ -63,6 +63,7 @@ class targetStep extends React.Component {
   handleNext = () => {
     const { dispatch } = this.props;
     dispatch(actions.registerTargets(this.state.chosenTargets));
+    window.scrollTo(0, 0);
   }
 
   render() {

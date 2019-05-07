@@ -17,7 +17,7 @@ const styles = theme => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
     },
@@ -26,6 +26,7 @@ const styles = theme => ({
     display: 'flex',
     flex: '1 1 100%',
     flexDirection: 'column',
+    maxWidth: '1180px',
     order: '2',
     overflow: 'auto',
     padding: '50px',
@@ -38,6 +39,7 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'space-between',
     marginBottom: '35px',
+    width: '100%',
   },
   btn: {
     margin: theme.spacing.unit,

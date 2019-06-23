@@ -8,7 +8,6 @@ import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import green from '@material-ui/core/colors/green';
 import * as actions from '../../../../actions/GetStarted';
 
 const styles = theme => ({
@@ -35,19 +34,19 @@ const styles = theme => ({
     margin: theme.spacing.unit,
   },
   btnImportant: {
-    color: green[500],
-    borderColor: green[500],
+    color: theme.feature.important.primary,
+    borderColor: theme.feature.important.primary,
     '&:hover': {
-      backgroundColor: '#4caf5014',
-      borderColor: green[500],
+      backgroundColor: theme.feature.important.secondary,
+      borderColor: theme.feature.important.primary,
     },
   },
   btnNotImportant: {
-    color: '#0000008a',
-    borderColor: '#0000008a',
+    color: theme.feature.notImportant.primary,
+    borderColor: theme.feature.notImportant.primary,
     '&:hover': {
-      backgroundColor: '#00000014',
-      borderColor: '#0000008a',
+      backgroundColor: theme.feature.notImportant.secondary,
+      borderColor: theme.feature.notImportant.primary,
     },
   },
 });

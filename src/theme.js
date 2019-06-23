@@ -1,7 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import red from '@material-ui/core/colors/red';
 import blue from '@material-ui/core/colors/blue';
 import green from '@material-ui/core/colors/green';
+import grey from '@material-ui/core/colors/grey';
+import red from '@material-ui/core/colors/red';
 
 export default createMuiTheme({
   typography: {
@@ -22,5 +23,15 @@ export default createMuiTheme({
     partial: '#ffcc33',
     mismatch: red[500],
     extra: blue[500],
+  },
+  feature: {
+    important: {
+      primary: green[500],
+      secondary: green[50],
+    },
+    notImportant: {
+      primary: grey[700],
+      secondary: grey[200],
+    },
   },
 });

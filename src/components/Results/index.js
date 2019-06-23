@@ -26,12 +26,12 @@ const styles = theme => ({
     display: 'flex',
     flex: '1 1 100%',
     flexDirection: 'column',
-    maxWidth: '1180px',
     overflow: 'auto',
     padding: '50px',
     paddingTop: '15px',
     [theme.breakpoints.up('md')]: {
       height: 'calc(100vh - 15px - 50px)',
+      padding: '50px calc((100% - 1180px) / 2)',
     },
   },
   title: {

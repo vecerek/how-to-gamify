@@ -59,7 +59,10 @@ export default (state = initialState, action = {}) => {
         ...state,
         userDefinedFramework: {
           ...state.userDefinedFramework,
-          targets: action.payload,
+          targets: Array.from([
+            ...new Set(state.userDefinedFramework.targets),
+            ...new Set(action.payload)
+          ]),
         },
         activeStep: state.activeStep + 1,
       }
@@ -97,6 +100,14 @@ export default (state = initialState, action = {}) => {
         userDefinedFramework: {
           ...state.userDefinedFramework,
           domains: state.userDefinedFramework.domains.concat([action.payload])
+        }
+      }
+    case types.ADD_TARGET:
+      return {
+        ...state,
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
+          targets: state.userDefinedFramework.targets.concat([action.payload])
         }
       }
     default:

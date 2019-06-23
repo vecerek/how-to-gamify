@@ -11,3 +11,4 @@ export const REMOVE_DOMAIN = 'REMOVE_DOMAIN';
 export const REMOVE_TARGET = 'REMOVE_TARGET';
 
 export const ADD_DOMAIN = 'ADD_DOMAIN';
+export const ADD_TARGET = 'ADD_TARGET';

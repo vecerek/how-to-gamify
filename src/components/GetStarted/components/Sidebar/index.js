@@ -106,6 +106,11 @@ class Sidebar extends React.Component {
     dispatch(actions.addDomain(domain));
   }
 
+  addTarget = target => {
+    const { dispatch } = this.props;
+    dispatch(actions.addTarget(target));
+  }
+
   renderFeatures = () => {
     const { expanded } = this.state;
     const { framework: { features }, classes, locked } = this.props;
@@ -182,9 +187,16 @@ class Sidebar extends React.Component {
           />
         ))}
         <Divider className={classes.divider} />
-        <Typography variant="subtitle1" gutterBottom>
-          Targets:
-        </Typography>
+        <div className={classes.sectionHeader}>
+          <Typography variant="subtitle1">
+            Targets:
+          </Typography>
+          <AddButton
+            options={Recommender.availableTargets()}
+            disabledOptions={framework.targets}
+            onAdd={this.addTarget}
+          />
+        </div>
         {framework.targets.map(t => (
           <Chip
             key={t}

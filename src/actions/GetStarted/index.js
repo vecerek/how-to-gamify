@@ -51,3 +51,8 @@ export const addDomain = domain => ({
   type: types.ADD_DOMAIN,
   payload: domain
 });
+
+export const addTarget = target => ({
+  type: types.ADD_TARGET,
+  payload: target
+});

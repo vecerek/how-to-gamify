@@ -13,6 +13,10 @@ import * as actions from '../../../../actions/Results';
 
 const styles = theme => ({
   card: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    justifyContent: 'space-between',
     maxWidth: 400,
   },
   actions: {

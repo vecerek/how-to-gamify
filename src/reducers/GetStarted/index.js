@@ -47,7 +47,10 @@ export default (state = initialState, action = {}) => {
         ...state,
         userDefinedFramework: {
           ...state.userDefinedFramework,
-          domains: action.payload,
+          domains: Array.from([
+            ...new Set(state.userDefinedFramework.domains),
+            ...new Set(action.payload)
+          ]),
         },
         activeStep: state.activeStep + 1,
       }
@@ -86,6 +89,14 @@ export default (state = initialState, action = {}) => {
         userDefinedFramework: {
           ...state.userDefinedFramework,
           targets: state.userDefinedFramework.targets.filter(t => t !== action.payload)
+        }
+      }
+    case types.ADD_DOMAIN:
+      return {
+        ...state,
+        userDefinedFramework: {
+          ...state.userDefinedFramework,
+          domains: state.userDefinedFramework.domains.concat([action.payload])
         }
       }
     default:

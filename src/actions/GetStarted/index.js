@@ -46,3 +46,8 @@ export const removeTarget = target => ({
   type: types.REMOVE_TARGET,
   payload: target,
 });
+
+export const addDomain = domain => ({
+  type: types.ADD_DOMAIN,
+  payload: domain
+});

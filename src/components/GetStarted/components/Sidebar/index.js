@@ -8,9 +8,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
+import CloseIcon from '@material-ui/icons/Close';
 import green from '@material-ui/core/colors/green';
 import grey from '@material-ui/core/colors/grey';
-import CloseIcon from '@material-ui/icons/Close';
+import AddButton from './components/AddButton';
+import Recommender from '../../../../lib/recommender';
 import { titleize } from '../../../../lib/formatting';
 import * as actions from '../../../../actions/GetStarted';
 
@@ -28,6 +30,9 @@ const styles = theme => ({
     },
   },
   chip: {
+    margin: theme.spacing.unit,
+  },
+  fab: {
     margin: theme.spacing.unit,
   },
   divider: {
@@ -55,6 +60,11 @@ const styles = theme => ({
     borderBottom: '1px dashed',
     cursor: 'pointer',
     display: 'inline',
+  },
+  sectionHeader: {
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
 });
 
@@ -89,6 +99,11 @@ class Sidebar extends React.Component {
     this.setState(prevState => ({
       expanded: !prevState.expanded,
     }));
+  }
+
+  addDomain = domain => {
+    const { dispatch } = this.props;
+    dispatch(actions.addDomain(domain));
   }
 
   renderFeatures = () => {
@@ -148,9 +163,16 @@ class Sidebar extends React.Component {
           </Typography>
         }
         <Divider className={classes.divider} />
-        <Typography variant="subtitle1" gutterBottom>
-          Domains:
-        </Typography>
+        <div className={classes.sectionHeader}>
+          <Typography variant="subtitle1">
+            Domains:
+          </Typography>
+          <AddButton
+            options={Recommender.availableDomains()}
+            disabledOptions={framework.domains}
+            onAdd={this.addDomain}
+          />
+        </div>
         {framework.domains.map(d => (
           <Chip
             key={d}

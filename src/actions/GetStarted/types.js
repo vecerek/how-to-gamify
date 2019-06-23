@@ -9,3 +9,5 @@ export const REGISTER_TARGETS = 'REGISTER_TARGETS';
 export const UPDATE_FEATURE = 'UPDATE_FEATURE';
 export const REMOVE_DOMAIN = 'REMOVE_DOMAIN';
 export const REMOVE_TARGET = 'REMOVE_TARGET';
+
+export const ADD_DOMAIN = 'ADD_DOMAIN';

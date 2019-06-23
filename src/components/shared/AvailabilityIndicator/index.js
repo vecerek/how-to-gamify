@@ -6,29 +6,25 @@ import WarningIcon from '@material-ui/icons/Warning';
 import StarIcon from '@material-ui/icons/Star';
 import CheckIcon from '@material-ui/icons/Check';
 import ClearIcon from '@material-ui/icons/Clear';
-import red from '@material-ui/core/colors/red';
-import yellow from '@material-ui/core/colors/yellow';
-import blue from '@material-ui/core/colors/blue';
-import green from '@material-ui/core/colors/green';
 
-const styles = {
+const styles = theme => ({
   icon: {
     fontSize: '18px',
     verticalAlign: 'top',
   },
   match: {
-    color: green[500],
+    color: theme.indicator.match,
   },
   mismatch: {
-    color: red[500],
+    color: theme.indicator.mismatch,
   },
   partial: {
-    color: yellow[500],
+    color: theme.indicator.partial,
   },
   extra: {
-    color: blue[500],
+    color: theme.indicator.extra,
   }
-};
+});
 
 const getIcon = variant => {
   switch(variant) {

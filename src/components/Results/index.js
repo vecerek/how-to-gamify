@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import BackIcon from '@material-ui/icons/KeyboardArrowLeft';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -34,6 +35,11 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
       height: 'calc(100vh - 15px - 50px)',
     },
+  },
+  title: {
+    fontSize: '2.5rem',
+    margin: '30px 0',
+    textAlign: 'center',
   },
   toolbar: {
     display: 'flex',
@@ -75,6 +81,13 @@ class Results extends React.Component {
       <React.Fragment>
         <div className={classes.container}>
           <div className={classes.resultsContainer}>
+            <Typography
+              className={classes.title}
+              variant="h1"
+              display="block"
+            >
+              Recommended Gamification Design Frameworks
+            </Typography>
             <div className={classes.toolbar}>
               <Button
                 size="small"

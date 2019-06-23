@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import green from '@material-ui/core/colors/green';
 import * as actions from '../../../../actions/GetStarted';
 
 const styles = theme => ({
@@ -31,6 +33,22 @@ const styles = theme => ({
   },
   btn: {
     margin: theme.spacing.unit,
+  },
+  btnImportant: {
+    color: green[500],
+    borderColor: green[500],
+    '&:hover': {
+      backgroundColor: '#4caf5014',
+      borderColor: green[500],
+    },
+  },
+  btnNotImportant: {
+    color: '#0000008a',
+    borderColor: '#0000008a',
+    '&:hover': {
+      backgroundColor: '#00000014',
+      borderColor: '#0000008a',
+    },
   },
 });
 
@@ -88,16 +106,16 @@ class FeatureStep extends React.Component {
                 </div>
                 <div className={classes.answerContainer}>
                   <Button
-                    variant="contained"
+                    variant="outlined"
                     size="large"
                     color="primary"
-                    className={classes.btn}
+                    className={classnames(classes.btn, classes.btnNotImportant)}
                     onClick={() => this.handleAnswer(currentFeature, 'U')}
                   >
                     Not important
                   </Button>
                   <Button
-                    variant="contained"
+                    variant="outlined"
                     size="large"
                     color="primary"
                     className={classes.btn}
@@ -106,10 +124,10 @@ class FeatureStep extends React.Component {
                     Might come in handy
                   </Button>
                   <Button
-                    variant="contained"
+                    variant="outlined"
                     size="large"
                     color="primary"
-                    className={classes.btn}
+                    className={classnames(classes.btn, classes.btnImportant)}
                     onClick={() => this.handleAnswer(currentFeature, 'E')}
                   >
                     Very important

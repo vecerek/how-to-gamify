@@ -1,0 +1,41 @@
+.circleBackground {
+  stroke: transparent;
+}
+
+.circleProgress {
+  stroke: red;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.circleBackground,
+.circleProgress {
+  fill: none;
+}
+
+.circleText {
+  font-size: 1em;
+  font-weight: 500;
+  fill: red;
+}
+
+.circleProgress.high {
+  stroke: #4caf50;
+}
+.circleText.high {
+  fill: #4caf50;
+}
+
+.circleProgress.mid {
+  stroke: #ffcc33;
+}
+.circleText.mid {
+  fill: #ffcc33;
+}
+
+.circleProgress.low {
+  stroke: #f44336;
+}
+.circleText.low {
+  fill: #f44336;
+}

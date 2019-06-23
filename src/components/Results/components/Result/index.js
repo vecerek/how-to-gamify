@@ -9,6 +9,7 @@ import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import LinkIcon from '@material-ui/icons/OpenInNew';
 import Button from '@material-ui/core/Button';
+import Score from './components/Score';
 import * as actions from '../../../../actions/Results';
 
 const styles = theme => ({
@@ -27,6 +28,12 @@ const styles = theme => ({
   btn: {
     margin: theme.spacing.unit,
   },
+  title: {
+    fontSize: '1.2rem',
+  },
+  subheader: {
+    fontSize: '.9rem',
+  },
 });
 
 class Result extends React.Component {
@@ -42,10 +49,16 @@ class Result extends React.Component {
     return (
       <Card className={classes.card}>
         <CardHeader
+          classes={{
+            title: classes.title,
+            subheader: classes.subheader,
+          }}
           action={
-            <Typography variant="subtitle1">
-              {Math.round(data.score * 100)}%
-            </Typography>
+            <Score
+              size={55}
+              percentage={Math.round(data.score * 100)}
+              strokeWidth={4}
+            />
           }
           title={framework.displayName}
           subheader={`${framework.displayAuthor} (${framework.year})`}

@@ -6,8 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import BackIcon from '@material-ui/icons/KeyboardArrowLeft';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
+import EditIcon from '@material-ui/icons/Edit';
 import Grid from '@material-ui/core/Grid';
 import Result from './components/Result';
 import Sidebar from '../GetStarted/components/Sidebar';
@@ -17,7 +16,7 @@ import * as actions from '../../actions/Results';
 const styles = theme => ({
   container: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column-reverse',
     justifyContent: 'center',
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row',
@@ -28,7 +27,6 @@ const styles = theme => ({
     flex: '1 1 100%',
     flexDirection: 'column',
     maxWidth: '1180px',
-    order: '2',
     overflow: 'auto',
     padding: '50px',
     paddingTop: '15px',
@@ -50,6 +48,9 @@ const styles = theme => ({
   btn: {
     margin: theme.spacing.unit,
   },
+  icon: {
+    marginRight: theme.spacing.unit,
+  },
 });
 
 class Results extends React.Component {
@@ -67,7 +68,7 @@ class Results extends React.Component {
     dispatch(actions.recommendFrameworks());
   }
 
-  switchConfiguration = () => () => {
+  switchConfiguration = () => {
     this.setState(prevState => ({
       showConfiguration: !prevState.showConfiguration
     }));
@@ -94,20 +95,19 @@ class Results extends React.Component {
                 className={classes.btn}
                 href="/"
               >
-                <BackIcon style={{ marginLeft: '5px' }} />
+                <BackIcon className={classes.icon} />
                 Back to home
               </Button>
-              <FormControlLabel
-                control={
-                  <Switch
-                    checked={showConfiguration}
-                    onChange={this.switchConfiguration()}
-                    value="configurationVisibility"
-                    color="primary"
-                  />
-                }
-                label="Show requirements"
-              />
+              {!showConfiguration &&
+                <Button
+                  size="small"
+                  className={classes.btn}
+                  onClick={this.switchConfiguration}
+                >
+                  <EditIcon className={classes.icon} style={{ fontSize: 18 }} />
+                  Edit requirements
+                </Button>
+              }
             </div>
             <Grid container spacing={24}>
               {recommendations.map(recommendation =>
@@ -117,7 +117,12 @@ class Results extends React.Component {
               )}
             </Grid>
           </div>
-          {showConfiguration && <Sidebar locked />}
+          {showConfiguration &&
+            <Sidebar
+              locked
+              onClose={this.switchConfiguration}
+            />
+          }
         </div>
         <DetailsDrawer />
       </React.Fragment>

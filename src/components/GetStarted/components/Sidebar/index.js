@@ -9,6 +9,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
 import green from '@material-ui/core/colors/green';
+import grey from '@material-ui/core/colors/grey';
+import CloseIcon from '@material-ui/icons/Close';
 import { titleize } from '../../../../lib/formatting';
 import * as actions from '../../../../actions/GetStarted';
 
@@ -17,8 +19,8 @@ const styles = theme => ({
     backgroundColor: '#f8f8f8',
     flex: '1 1 100%',
     height: '100%',
-    order: '1',
     padding: '50px',
+    position: 'relative',
     [theme.breakpoints.up('md')]: {
       flex: '0 1 450px',
       height: 'calc(100vh - 2 * 50px)',
@@ -38,6 +40,17 @@ const styles = theme => ({
       color: green[500],
     },
   },
+  closeIcon: {
+    color: grey[500],
+    cursor: 'pointer',
+    fontSize: 30,
+    position: 'absolute',
+    right: 15,
+    top: 15,
+    '&:hover': {
+      color: 'initial',
+    },
+  }
 });
 
 class Sidebar extends React.Component {
@@ -64,10 +77,16 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const { classes, framework, locked } = this.props;
+    const { classes, framework, locked, onClose } = this.props;
 
     return (
       <div className={classes.container}>
+        {onClose &&
+          <CloseIcon
+            className={classes.closeIcon}
+            onClick={onClose}
+          />
+        }
         <Typography variant="h6" gutterBottom>
           Requirements
         </Typography>
@@ -128,6 +147,7 @@ const mapStateToProps = ({ getStarted: state }) => ({
 
 Sidebar.propTypes = {
   locked: PropTypes.bool,
+  onClose: PropTypes.func,
   framework: PropTypes.shape({
     features: PropTypes.arrayOf(
       PropTypes.shape({

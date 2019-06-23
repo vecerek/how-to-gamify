@@ -49,8 +49,8 @@ export const compareFeatures = (base, other) => Object.keys(base.features).reduc
 
 export const calculateScore = (comparison, weights) => {
   const { domains, targets, features } = comparison;
-  const domainScore = weights.domains * Math.max(...Object.values(domains));
-  const targetScore = weights.targets * Math.max(...Object.values(targets));
+  const domainScore = weights.domains * domains.score;
+  const targetScore = weights.targets * targets.score;
   const featureScore = weights.features * Object.values(features).reduce((sum, v) => sum + v);
 
 

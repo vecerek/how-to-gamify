@@ -15,6 +15,7 @@ import AddButton from './components/AddButton';
 import Recommender from '../../../../lib/recommender';
 import { titleize } from '../../../../lib/formatting';
 import * as actions from '../../../../actions/GetStarted';
+import { recommendFrameworks } from '../../../../actions/Results';
 
 const styles = theme => ({
   container: {
@@ -74,7 +75,7 @@ class Sidebar extends React.Component {
   };
 
   handleCheck = (feature, currentValue) => () => {
-    const { dispatch } = this.props;
+    const { dispatch, realTimeEvaluation } = this.props;
     const values = ['U', 'I', 'E'];
     const currentIndex = values.indexOf(currentValue);
     const nextIndex = values.length === currentIndex + 1
@@ -83,16 +84,28 @@ class Sidebar extends React.Component {
     const nextValue = values[nextIndex];
 
     dispatch(actions.updateFeature(feature, nextValue));
+    
+    if (realTimeEvaluation) {
+      dispatch(recommendFrameworks());
+    }
   }
 
   handleDeleteDomain = (d) => () => {
-    const { dispatch } = this.props;
+    const { dispatch, realTimeEvaluation } = this.props;
     dispatch(actions.removeDomain(d));
+    
+    if (realTimeEvaluation) {
+      dispatch(recommendFrameworks());
+    }
   }
 
   handleDeleteTarget = (t) => () => {
-    const { dispatch } = this.props;
+    const { dispatch, realTimeEvaluation } = this.props;
     dispatch(actions.removeTarget(t));
+    
+    if (realTimeEvaluation) {
+      dispatch(recommendFrameworks());
+    }
   }
 
   toggleExpanded = () => {
@@ -102,18 +115,26 @@ class Sidebar extends React.Component {
   }
 
   addDomain = domain => {
-    const { dispatch } = this.props;
+    const { dispatch, realTimeEvaluation } = this.props;
     dispatch(actions.addDomain(domain));
+    
+    if (realTimeEvaluation) {
+      dispatch(recommendFrameworks());
+    }
   }
 
   addTarget = target => {
-    const { dispatch } = this.props;
+    const { dispatch, realTimeEvaluation } = this.props;
     dispatch(actions.addTarget(target));
+
+    if (realTimeEvaluation) {
+      dispatch(recommendFrameworks());
+    }
   }
 
   renderFeatures = () => {
     const { expanded } = this.state;
-    const { framework: { features }, classes, locked } = this.props;
+    const { framework: { features }, classes } = this.props;
 
     const visibleFeatures = expanded || features.length < 5
       ? features
@@ -127,10 +148,9 @@ class Sidebar extends React.Component {
             checked={value !== 'U'}
             onChange={this.handleCheck(id, value)}
             value={id}
-            disabled={!!locked}
             indeterminate={value === 'I' ? true : null}
             className={classnames({
-              [classes.checked]: value === 'E' && !locked,
+              [classes.checked]: value === 'E',
             })}
             color="primary"
           />
@@ -141,7 +161,7 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const { classes, framework, locked, onClose } = this.props;
+    const { classes, framework, onClose } = this.props;
     const { expanded } = this.state;
 
     return (
@@ -182,7 +202,7 @@ class Sidebar extends React.Component {
           <Chip
             key={d}
             label={titleize(d)}
-            onDelete={locked ? null : this.handleDeleteDomain(d)}
+            onDelete={this.handleDeleteDomain(d)}
             className={classes.chip}
           />
         ))}
@@ -201,7 +221,7 @@ class Sidebar extends React.Component {
           <Chip
             key={t}
             label={titleize(t)}
-            onDelete={locked ? null : this.handleDeleteTarget(t)}
+            onDelete={this.handleDeleteTarget(t)}
             className={classes.chip}
           />
         ))}
@@ -215,7 +235,7 @@ const mapStateToProps = ({ getStarted: state }) => ({
 });
 
 Sidebar.propTypes = {
-  locked: PropTypes.bool,
+  realTimeEvaluation: PropTypes.bool,
   onClose: PropTypes.func,
   framework: PropTypes.shape({
     features: PropTypes.arrayOf(
@@ -227,6 +247,10 @@ Sidebar.propTypes = {
     domains: PropTypes.arrayOf(PropTypes.string),
     targets: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
+};
+
+Sidebar.defaultProps = {
+  realTimeEvaluation: false,
 };
 
 export default connect(mapStateToProps)(withStyles(styles)(Sidebar));

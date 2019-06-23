@@ -119,7 +119,7 @@ class Results extends React.Component {
           </div>
           {showConfiguration &&
             <Sidebar
-              locked
+              realTimeEvaluation
               onClose={this.switchConfiguration}
             />
           }

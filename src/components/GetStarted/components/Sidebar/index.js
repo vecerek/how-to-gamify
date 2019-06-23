@@ -50,10 +50,19 @@ const styles = theme => ({
     '&:hover': {
       color: 'initial',
     },
-  }
+  },
+  showMore: {
+    borderBottom: '1px dashed',
+    cursor: 'pointer',
+    display: 'inline',
+  },
 });
 
 class Sidebar extends React.Component {
+  state = {
+    expanded: false,
+  };
+
   handleCheck = (feature, currentValue) => () => {
     const { dispatch } = this.props;
     const values = ['U', 'I', 'E'];
@@ -76,8 +85,44 @@ class Sidebar extends React.Component {
     dispatch(actions.removeTarget(t));
   }
 
+  toggleExpanded = () => {
+    this.setState(prevState => ({
+      expanded: !prevState.expanded,
+    }));
+  }
+
+  renderFeatures = () => {
+    const { expanded } = this.state;
+    const { framework: { features }, classes, locked } = this.props;
+
+    const visibleFeatures = expanded || features.length < 5
+      ? features
+      : features.slice(0, 5);
+
+    return visibleFeatures.map(({ id, value }) => (
+      <FormControlLabel
+        key={id}
+        control={
+          <Checkbox
+            checked={value !== 'U'}
+            onChange={this.handleCheck(id, value)}
+            value={id}
+            disabled={!!locked}
+            indeterminate={value === 'I' ? true : null}
+            className={classnames({
+              [classes.checked]: value === 'E' && !locked,
+            })}
+            color="primary"
+          />
+        }
+        label={titleize(id)}
+      />
+    ))
+  }
+
   render() {
     const { classes, framework, locked, onClose } = this.props;
+    const { expanded } = this.state;
 
     return (
       <div className={classes.container}>
@@ -93,25 +138,15 @@ class Sidebar extends React.Component {
         <Typography variant="subtitle1" gutterBottom>
           Features:
         </Typography>
-        {framework.features.map(({ id, value }) => (
-          <FormControlLabel
-            key={id}
-            control={
-              <Checkbox
-                checked={value !== 'U'}
-                onChange={this.handleCheck(id, value)}
-                value={id}
-                disabled={!!locked}
-                indeterminate={value === 'I' ? true : null}
-                className={classnames({
-                  [classes.checked]: value === 'E' && !locked,
-                })}
-                color="primary"
-              />
-            }
-            label={titleize(id)}
-          />
-        ))}
+        {this.renderFeatures()}
+        {framework.features.length >= 5 &&
+          <Typography
+            className={classes.showMore}
+            onClick={this.toggleExpanded}
+          >
+            Show {expanded ? `less (5)` : `all (${framework.features.length})`}
+          </Typography>
+        }
         <Divider className={classes.divider} />
         <Typography variant="subtitle1" gutterBottom>
           Domains:

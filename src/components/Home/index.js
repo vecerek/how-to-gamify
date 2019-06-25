@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SvgIcon from '@material-ui/core/SvgIcon';
-// import GithubIcon from '@material-ui/icons/Github';
 import styles from './index.module.css';
 
 const classes = theme => ({

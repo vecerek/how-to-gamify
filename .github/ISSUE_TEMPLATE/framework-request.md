@@ -10,6 +10,21 @@ assignees: vecerek
 ## Description
 <!-- Describe the gamification design framework you would like to include in the recommender system -->
 
+*Title*:
+
+*Authors*:
+
+*Year of publication*:
+
+*List of requirements/assumptions of the framework*:
+<!-- For example: the framework assumes the use of an e-learning platform -->
+-
+
+*List of theories the framework builds on top of*:
+
+- 
+
+
 ## Classification
 
 **Domain**: 

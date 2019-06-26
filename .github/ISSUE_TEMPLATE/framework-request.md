@@ -16,6 +16,8 @@ assignees: vecerek
 
 *Year of publication*:
 
+*Short description (max. 50 words)*:
+
 *List of requirements/assumptions of the framework*:
 <!-- For example: the framework assumes the use of an e-learning platform -->
 -
